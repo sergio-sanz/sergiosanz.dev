@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    VARIABLES CSS
+\*------------------------------------*/
+
+:root {
+    // Colores
+    --primary-color: hsl(205, 80, 35);
+    --primary-light-color: hsl(205, 80, 90);
+    --primary-dark-color: hsl(205, 80, 10);
+    --text-color: hsl(0, 0, 19);
+    --inverted-text-color: hsl(0, 0, 90);
+    --gray-color: hsl(0, 0, 64);
+    // Tipografías
+    --font-family: 'Barlow', sans-serif;
+    --font-family-text: 'Merriweather', serif;
+    // Tamaños de fuente
+    --font-size-xlarge: 2.625rem;
+    --font-size-large: 2rem;
+    --font-size-medium: 1.375rem;
+    --font-size-regular: 1.125rem;
+    --font-size-small: 0.9375rem;
+    // Márgenes
+    --spacing-xlarge: 5.625rem;
+    --spacing-large: 2.5rem;
+    --spacing-medium: 1.875rem;
+    --spacing-small: 1rem;
+}

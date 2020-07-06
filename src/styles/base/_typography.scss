@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    TYPOGRAPHY STYLES
+\*------------------------------------*/
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    font-family: var(--font-family);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: var(--font-size-xlarge);
+}
+
+h2 {
+    font-size: var(--font-size-large);
+}
+
+h3 {
+    font-size: var(--font-size-medium);
+}
