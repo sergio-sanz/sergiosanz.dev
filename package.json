@@ -1,0 +1,20 @@
+{
+  "name": "sergiosanz.dev",
+  "version": "1.0.0",
+  "description": "Sitio personal construido en Gatsby.",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sergio Sanz",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.23.21",
+    "gatsby-source-filesystem": "^2.3.18",
+    "gatsby-transformer-remark": "^2.8.23",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
