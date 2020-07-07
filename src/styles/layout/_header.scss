@@ -3,6 +3,17 @@
 \*------------------------------------*/
 
 .header {
+    align-items: center;
     box-shadow: 0 1px 0 var(--border-color);
+    display: flex;
     height: var(--header-height);
+    justify-content: space-between;
+    padding: 0 var(--spacing-xlarge);
+}
+
+.header__logo {
+    svg {
+        height: 34px;
+        fill: var(--text-color);
+    }
 }

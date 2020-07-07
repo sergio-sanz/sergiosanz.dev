@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'gatsby';
+
+import Logo from '../assets/logo.svg';
 
 const Header = () => {
   return (
@@ -7,7 +10,9 @@ const Header = () => {
 
       </div>
       <div className="header__logo">
-
+        <Link to="/">
+          <Logo />
+        </Link>
       </div>
       <div className="header__dark">
 

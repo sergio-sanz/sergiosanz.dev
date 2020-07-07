@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "gatsby": "^2.23.21",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.3.10",
     "gatsby-source-filesystem": "^2.3.18",
     "gatsby-transformer-remark": "^2.8.23",

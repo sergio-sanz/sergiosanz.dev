@@ -7,13 +7,14 @@ const siteMetadata = {
 const plugins = [
   `gatsby-transformer-remark`,
   `gatsby-plugin-sass`,
+  `gatsby-plugin-react-svg`,
   {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `posts`,
       path: `${__dirname}/src/posts`,
     }
-  }
+  },
 ]
 
 module.exports = {
