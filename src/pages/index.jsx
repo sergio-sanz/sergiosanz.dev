@@ -1,9 +1,13 @@
 import React from 'react';
 
-import '../styles/main.scss';
+import Layout from '../components/Layout';
 
-export default function HomePage() {
+const HomePage = () => {
   return (
-    <h1>¡Hola mundo!</h1>
+    <Layout>
+      <h1>¡Hola mundo!</h1>
+    </Layout>
   );
 }
+
+export default HomePage;
