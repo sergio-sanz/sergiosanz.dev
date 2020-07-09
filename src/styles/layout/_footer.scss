@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    FOOTER STYLES
+\*------------------------------------*/
+
+.footer {
+    background-color: var(--footer-color);
+    color: var(--gray-color);
+    font-size: var(--font-size-small);
+    height: var(--footer-height);
+
+    .wrapper {
+        align-items: center;
+        display: flex;
+        height: 100%;
+    }
+}
+
+.footer__copyright {
+    flex: 1;
+}
+
+.footer__links {
+    ul {
+        display: inline-flex;
+
+        li:not(:first-child) {
+            padding-left: 16px;
+            position: relative;
+
+            &:before {
+                background-color: var(--gray-color);
+                border-radius: 50%;
+                content: '';
+                height: 2px;
+                left: 0;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 2px;
+            }
+        }
+
+        li:not(:last-child) {
+            margin-right: 14px;
+        }
+    }
+
+    a {
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: var(--text-color);
+        }
+    }
+}
