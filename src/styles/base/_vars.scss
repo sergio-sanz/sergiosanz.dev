@@ -13,6 +13,7 @@
     --border-color: hsl(0, 0%, 92%);
     --gray-color: hsl(0, 0%, 64%);
     --footer-color: hsl(0, 0%, 94%);
+    --selection-color: var(--primary-light-color);
     // Tipografías
     --font-family: 'Barlow', sans-serif;
     --font-family-text: 'Merriweather', serif;
@@ -31,6 +32,13 @@
     --header-height: 70px;
     --footer-height: 60px;
     --max-width-wrapper: 1080px;
+}
+
+html.dark-mode {
+    --text-color: hsl(0, 0%, 90%);
+    --bg-color: hsl(205, 55%, 7%);
+    --border-color: hsl(205, 55%, 15%);
+    --footer-color: hsl(205, 55%, 9%);
 }
 
 /*------------------------------------*\

@@ -22,6 +22,8 @@
 }
 
 .header__button {
+    --button-hover-color: hsla(0, 0%, 0%, 0.06);
+    --button-active-color: hsla(0, 0%, 0%, 0.12);
     height: 36px;
     position: relative;
     width: 36px;
@@ -40,17 +42,23 @@
     }
 
     &:hover::before {
-        background-color: hsl(0, 0%, 94%);
+        background-color: var(--button-hover-color);
         transform: scale(1.5);
     }
 
     &:active::before {
-        background-color: hsl(0, 0%, 88%);
+        background-color: var(--button-active-color);
     }
 
     .icon {
         margin: 0 auto;
     }
+}
+
+// Colors in Dark Mode
+html.dark-mode .header__button {
+    --button-hover-color: hsla(0, 0%, 100%, 0.06);
+    --button-active-color: hsla(0, 0%, 100%, 0.12);
 }
 
 // Medium Screens
