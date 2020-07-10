@@ -7,7 +7,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__hamburger">
-
+        <button className="header__button">
+          <i class="icon icon--menu"></i>
+        </button>
       </div>
       <div className="header__logo">
         <Link to="/">
@@ -15,7 +17,9 @@ const Header = () => {
         </Link>
       </div>
       <div className="header__dark">
-
+        <button className="header__button">
+          <i class="icon icon--moon"></i>
+        </button>
       </div>
     </header>
   );

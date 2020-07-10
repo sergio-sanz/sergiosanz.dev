@@ -22,6 +22,18 @@ a {
     text-decoration: none;
 }
 
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    padding: 0;
+}
+
 ::selection {
     background-color: var(--primary-light-color);
+}
+
+.icon {
+    color: var(--text-color);
 }

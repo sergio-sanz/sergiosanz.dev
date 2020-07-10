@@ -32,3 +32,13 @@
     --footer-height: 60px;
     --max-width-wrapper: 1080px;
 }
+
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+
+$breakpoints: (
+  small: 460px,
+  medium: 768px,
+  large: 1150px
+);

@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    MENU ICON
+\*------------------------------------*/
+
+.icon--moon,
+.icon--moon::after {
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.icon--moon {
+    border: 2px solid;
+    border-bottom-color: transparent;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    transform: rotate(-135deg) scale(1.2);
+    width: 20px;
+}
+
+.icon--moon::after {
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    content: '';
+    height: 18px;
+    left: 2px;
+    position: absolute;
+    top: 8px;
+    width: 12px;
+}

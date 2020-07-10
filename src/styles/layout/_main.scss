@@ -5,6 +5,7 @@
 .main {
     display: flex;
     flex-direction: column;
+    margin-top: var(--header-height);
 }
 
 .main,
@@ -15,5 +16,13 @@
 .wrapper {
     margin: 0 auto;
     max-width: var(--max-width-wrapper);
+    padding: 0 var(--spacing-medium);
     width: 100%;
+}
+
+// Small Screens
+@media screen and (max-width: map-get($breakpoints, small)) {
+    .wrapper {
+        padding: 0 var(--spacing-small);
+    }
 }

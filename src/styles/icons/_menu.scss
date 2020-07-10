@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    MENU ICON
+\*------------------------------------*/
+
+.icon--menu,
+.icon--menu::after,
+.icon--menu::before {
+    background-color: currentColor;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    height: 3px;
+    position: relative;
+    width: 28px;
+}
+
+.icon--menu::after,
+.icon--menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+}
+
+.icon--menu::after {
+    top: 8px;
+}
