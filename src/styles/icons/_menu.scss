@@ -19,8 +19,33 @@
     content: '';
     position: absolute;
     top: -8px;
+    transition: top 0.25s ease,
+                transform 0.25s ease;
 }
 
 .icon--menu::after {
     top: 8px;
+}
+
+.icon--menu {
+    transition: width 0.25s ease;
+}
+
+// Cross Icon (Menu active)
+
+.icon--active.icon--menu::after,
+.icon--active.icon--menu::before {
+    top: 0;
+}
+
+.icon--active.icon--menu::after {
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.icon--active.icon--menu::before {
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.icon--active.icon--menu {
+    width: 0;
 }

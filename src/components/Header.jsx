@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import DarkToggle from './DarkToggle';
+import Hamburger from './Hamburger';
 
 import Logo from '../assets/logo.svg';
 
@@ -9,9 +10,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__hamburger">
-        <button className="header__button">
-          <i className="icon icon--menu"></i>
-        </button>
+        <Hamburger />
       </div>
       <div className="header__logo">
         <Link to="/">
