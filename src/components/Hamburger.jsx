@@ -1,22 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Hamburger = () => {
-  const [active, setActive] = useState(false);
-
+const Hamburger = props => {
   const label = () => {
-    return active ? 'Cerrar menú' : 'Abrir menú';
+    return props.openSide ? 'Cerrar menú' : 'Abrir menú';
   }
 
   return (
     <button
       className="header__button"
       role="switch"
-      aria-checked={ active ? 'true' : 'false' }
+      aria-checked={ props.openSide ? 'true' : 'false' }
       aria-label={ label() }
       title={ label() }
-      onClick={ () => setActive(!active) }
+      onClick={ () => props.setOpenSide(!props.openSide) }
     >
-      <i className={ 'icon icon--menu' + (active ? ' icon--active' : '') }></i>
+      <i className={ 'icon icon--menu' + (props.openSide ? ' icon--active' : '') }></i>
     </button>
   );
 }
