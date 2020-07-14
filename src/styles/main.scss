@@ -7,11 +7,14 @@
 // Components
 
 // Icons
+@import "icons/arrow-up";
 @import "icons/menu";
 @import "icons/moon";
+@import "icons/share";
 @import "icons/sun";
 
 // Layout
+@import "layout/floating-header";
 @import "layout/footer";
 @import "layout/header";
 @import "layout/main";

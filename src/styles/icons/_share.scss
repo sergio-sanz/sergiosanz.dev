@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    SHARE ICON
+\*------------------------------------*/
+
+.icon--share {
+    background-color: currentColor;
+    border-radius: 100px;
+    box-shadow: 10px -6px 0,
+                10px 6px 0;
+    box-sizing: border-box;
+    display: block;
+    height: 6px;
+    position: relative;
+    transform: scale(1.2);
+    width: 6px;
+}
+
+.icon--share::after,
+.icon--share::before {
+    background-color: currentColor;
+    border-radius: 3px;
+    box-sizing: border-box;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 2px;
+    position: absolute;
+    width: 10px;
+}
+
+.icon--share::before {
+    top: 0;
+    transform: rotate(-35deg);
+}
+
+.icon--share::after {
+    bottom: 0;
+    transform: rotate(35deg);
+}

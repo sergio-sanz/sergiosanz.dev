@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    ANIMATED ARROW UP
+\*------------------------------------*/
+
+.icon--arrow-up {
+    box-sizing: border-box;
+    display: block;
+    height: 22px;
+    position: relative;
+    transform: translateY(5px);
+    transition: transform 0.2s ease;
+    width: 22px;
+}
+
+.icon--arrow-up::after,
+.icon--arrow-up::before {
+    box-sizing: border-box;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+}
+
+.icon--arrow-up::after {
+    border-top: 2px solid;
+    border-right: 2px solid;
+    height: 14px;
+    left: 4px;
+    transform: rotate(-45deg);
+    width: 14px;
+}
+
+.icon--arrow-up::before {
+    background-color: currentColor;
+    height: 0;
+    left: 10px;
+    transition: height .2s;
+    width: 2px;
+}
+
+.header__button:hover .icon--arrow-up {
+    transform: translateY(0);
+}
+
+.header__button:hover .icon--arrow-up::before {
+    height: 18px;
+}

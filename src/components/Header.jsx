@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 
 import DarkToggle from './DarkToggle';
+import FloatingHeader from './FloatingHeader';
 import Hamburger from './Hamburger';
 import SideMenu from './SideMenu';
 
@@ -25,6 +26,7 @@ const Header = () => {
         </div>
       </header>
       <SideMenu openSide={ openSide } setOpenSide={ setOpenSide } />
+      <FloatingHeader />
     </>
   );
 }
