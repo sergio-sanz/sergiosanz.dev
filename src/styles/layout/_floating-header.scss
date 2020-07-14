@@ -3,11 +3,8 @@
 \*------------------------------------*/
 
 .floating-header {
-    align-items: center;
     background-color: var(--bg-color);
-    display: flex;
     height: var(--header-height);
-    padding: 0 var(--spacing-xlarge);
     position: fixed;
     transform: translateY(-100%);
     transition: transform 0.2s ease;
@@ -19,6 +16,12 @@
                 0 5px 10px hsla(0, 0%, 0%, 0.07);
         transform: translateY(0);
     }
+}
+
+.floating-header__content {
+    align-items: center;
+    display: flex;
+    padding: 0 var(--spacing-xlarge);
 }
 
 .floating-header__heading {
@@ -35,14 +38,14 @@
 
 // Medium Screens
 @media screen and (max-width: map-get($breakpoints, large)) {
-    .floating-header {
+    .floating-header__content {
         padding: 0 var(--spacing-medium);
     }
 }
 
 // Small Screens
 @media screen and (max-width: map-get($breakpoints, small)) {
-    .floating-header {
+    .floating-header__content {
         padding: 0 var(--spacing-small);
     }
 

@@ -8,7 +8,7 @@ import SideMenu from './SideMenu';
 
 import Logo from '../assets/logo.svg';
 
-const Header = () => {
+const Header = ({ post }) => {
   const [openSide, setOpenSide] = useState(false);
   return (
     <>
@@ -26,7 +26,7 @@ const Header = () => {
         </div>
       </header>
       <SideMenu openSide={ openSide } setOpenSide={ setOpenSide } />
-      <FloatingHeader />
+      <FloatingHeader post={ post } />
     </>
   );
 }

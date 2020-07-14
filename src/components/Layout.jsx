@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import Footer from './Footer';
 import Header from './Header';
@@ -6,10 +6,11 @@ import Header from './Header';
 import '../styles/main.scss';
 
 const Layout = props => {
+  const post = useRef();
   return (
     <>
-      <Header />
-      <main className="main">
+      <Header post={ post } />
+      <main className="main" ref={ post }>
         <div className="wrapper">
           { props.children }
         </div>
