@@ -24,7 +24,7 @@ const Header = () => {
           <DarkToggle />
         </div>
       </header>
-      <SideMenu openSide={ openSide } />
+      <SideMenu openSide={ openSide } setOpenSide={ setOpenSide } />
     </>
   );
 }
