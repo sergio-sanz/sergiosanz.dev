@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    ARTICLE STYLES
+\*------------------------------------*/
+
+.article {
+    padding: var(--spacing-medium) 0;
+}
+
+.article__head {
+    h1 {
+        margin-bottom: var(--spacing-medium);
+    }
+}
+
+.article__details {
+    color: var(--gray-color);
+    margin-bottom: var(--spacing-medium);
+}
+
+.article__content {
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-regular);
+    line-height: 1.75;
+    max-width: 700px;
+
+    h2,
+    h3,
+    p,
+    pre {
+        margin-bottom: 1.125rem;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+}
+
+// Medium Screens
+@media screen and (max-width: map-get($breakpoints, large)) {
+    .article__content {
+        font-size: 1em;
+    }
+}

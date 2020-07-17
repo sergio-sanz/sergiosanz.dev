@@ -30,6 +30,32 @@ button {
     padding: 0;
 }
 
+code,
+pre {
+    font-family: 'Consolas', monospace;
+}
+
+code {
+    background-color: hsl(345, 35%, 96%);
+    color: hsl(345, 69%, 46%);
+    border-radius: 3px;
+    padding: 2px 4px;
+}
+
+pre {
+    background-color: hsl(0, 0%, 22%);
+    border-radius: 5px;
+
+    code {
+        background-color: transparent;
+        color: var(--inverted-text-color);
+        border-radius: 0;
+        display: block;
+        padding: var(--spacing-medium) 2.25rem;
+        overflow-x: auto;
+    }
+}
+
 ::selection {
     background-color: var(--selection-color);
 }
