@@ -36,6 +36,15 @@
     white-space: nowrap;
 }
 
+.floating-header__social {
+    display: inline-block;
+
+    li {
+        display: inline-block;
+        margin-right: var(--spacing-small);
+    }
+}
+
 // Medium Screens
 @media screen and (max-width: map-get($breakpoints, large)) {
     .floating-header__content {

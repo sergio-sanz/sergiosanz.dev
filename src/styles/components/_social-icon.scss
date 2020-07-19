@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    SOCIAL ICONS STYLES
+\*------------------------------------*/
+
+.social-icon {
+    border-radius: 50%;
+    display: block;
+    fill: #ffffff;
+    height: 36px;
+    position: relative;
+    width: 36px;
+
+    svg {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 22px;
+    }
+}
+
+.social-icon--facebook {
+    background-color: #1877f2;
+}
+
+.social-icon--twitter {
+    background-color: #1da1f2;
+}
+
+.social-icon--whatsapp {
+    background-color: #25d366;
+}

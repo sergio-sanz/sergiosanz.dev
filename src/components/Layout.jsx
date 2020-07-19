@@ -9,7 +9,7 @@ const Layout = props => {
   const post = useRef();
   return (
     <>
-      <Header post={ post } />
+      <Header page={ props.page } post={ post } />
       <main className="main" ref={ post }>
         <div className="wrapper">
           { props.children }

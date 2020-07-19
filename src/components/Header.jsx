@@ -8,10 +8,11 @@ import SideMenu from './SideMenu';
 
 import Logo from '../assets/logo.svg';
 
-const Header = ({ post }) => {
+const Header = ({ page, post }) => {
   const [openSide, setOpenSide] = useState(false);
   return (
     <>
+      { /* Cabecera principal */ }
       <header className="header">
         <div className="header__hamburger">
           <Hamburger openSide={ openSide } setOpenSide={ setOpenSide } />
@@ -25,8 +26,14 @@ const Header = ({ post }) => {
           <DarkToggle />
         </div>
       </header>
+
+      { /* Menú lateral desplegable con el botón de hamburguesa */ }
       <SideMenu openSide={ openSide } setOpenSide={ setOpenSide } />
-      <FloatingHeader post={ post } />
+
+      { /* Si se recibe información sobre la página se renderiza la cabecera flotante */ }
+      { typeof page !== 'undefined' &&
+        <FloatingHeader page={ page } post={ post } />
+      }
     </>
   );
 }

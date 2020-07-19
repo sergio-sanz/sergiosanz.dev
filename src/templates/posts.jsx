@@ -11,7 +11,7 @@ export default ({ pageContext: { frontmatter, html } }) => {
   }
 
   return (
-    <Layout>
+    <Layout page={ frontmatter }>
       <SEO title={ frontmatter.title } />
       <article className="article">
         <div className="article__head">
