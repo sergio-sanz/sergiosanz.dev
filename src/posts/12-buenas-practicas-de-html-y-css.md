@@ -27,7 +27,7 @@ También es recomendable que las **clases de estado** (que son las que asignamos
 
 Cuando creamos código HTML tenemos que pensar en que solamente tiene que estar definida la estructura de la página, no los estilos.
 
-```
+```html
 <span style="color: blue">Texto</span>
 ```
 
@@ -39,7 +39,7 @@ Sin embargo, **hay ocasiones en las que sí es útil declarar estilos en línea*
 
 Los navegadores por defecto añaden márgenes y ciertos estilos a las etiquetas básicas de HTML. El problema está en que no todos los navegadores aplican los mismos estilos, lo que en ocasiones puede descuadrar nuestros diseños. La solución es resetear los estilos, y para ello los más conocidos son [Normalize](https://necolas.github.io/normalize.css/) o [Reset](https://meyerweb.com/eric/tools/css/reset/). ¿Cuál elegir? La diferencia entre estos dos es que el primero se encarga de **aplicar los estilos base para que sean los mismos para todos los navegadores** mientras que el segundo **elimina los márgenes de todos los elementos**. Personalmente suelo preferir el segundo pero con un pequeño añadido:
 
-```
+```css
 *, body * { box-sizing: border-box }
 ```
 
@@ -49,13 +49,13 @@ El `box-sizing` es una propiedad que altera el comportamiento por defecto del na
 
 Los lenguajes de programación están pensados para que los entienda una máquina, no el humano. Tenemos que pensar en nuestro yo futuro o en otra persona que pueda leer nuestro código, por ese motivo siempre es bueno ir dejando comentarios.
 
-```
+```css
 /* Esto es un comentario simple */
 ```
 
 También es buena idea introducir las secciones con **comentarios en forma de bloque**:
 
-```
+```css
 /*------------------------------------*\
     HEADER STYLES
 \*------------------------------------*/
@@ -69,7 +69,7 @@ Cada vez que un valor sea cero lo correcto es no indicar ninguna unidad. Es inco
 
 Tener un buen control de la cascada es esencial para crear código limpio y ordenado. Lo que hacemos con `!important` es alterar el funcionamiento natural de la cascada, un ejemplo:
 
-```
+```css
 p {
     color: red !important;
 }
@@ -85,7 +85,7 @@ En este código los párrafos deberían de tener el color azul, pero al haber de
 
 Si tenemos el siguiente código:
 
-```
+```css
 h1 {
     font-size: 2.5em;
     font-weight: 800;
@@ -98,7 +98,7 @@ h2 {
 
 Podemos sintetizarlo de forma que quede menos redundante:
 
-```
+```css
 h1,
 h2 {
     font-weight: 800;
