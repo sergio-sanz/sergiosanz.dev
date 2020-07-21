@@ -24,6 +24,7 @@
 .header__button {
     --button-hover-color: hsla(0, 0%, 0%, 0.06);
     --button-active-color: hsla(0, 0%, 0%, 0.12);
+    --button-focus-color: var(--primary-light-color);
     height: 36px;
     position: relative;
     width: 36px;
@@ -31,6 +32,7 @@
     html.dark-mode & {
         --button-hover-color: hsla(0, 0%, 100%, 0.06);
         --button-active-color: hsla(0, 0%, 100%, 0.12);
+        --button-focus-color: var(--primary-dark-color);
     }
 
     &::before {
