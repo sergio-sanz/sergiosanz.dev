@@ -50,7 +50,7 @@
 
             @for $i from 0 to 3 {
                 &:nth-child(#{ $i + 1 }) {
-                    transition-delay: #{ $i * 15 }ms;
+                    transition-delay: #{ (3 - $i) * 15 }ms;
                 }
             }
         }
@@ -80,8 +80,6 @@
         }
     }
 }
-
-
 
 // Medium Screens
 @media screen and (max-width: map-get($breakpoints, large)) {

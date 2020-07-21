@@ -30,3 +30,10 @@
 .social-icon--whatsapp {
     background-color: #25d366;
 }
+
+// Medium Screens or smaller
+@media screen and (min-width: map-get($breakpoints, large)) {
+    .social-icon--whatsapp {
+        display: none;
+    }
+}
