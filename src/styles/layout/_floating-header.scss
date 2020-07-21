@@ -37,8 +37,12 @@
 }
 
 .floating-header__share {
+    display: inline-flex;
+
     .floating-header__social {
-        display: inline-block;
+        // Este valor se cambia vía JavaScript
+        display: none;
+        height: 36px;
 
         li {
             display: inline-block;

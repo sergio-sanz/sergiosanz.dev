@@ -17,7 +17,7 @@ export default ({ pageContext: { frontmatter, html } }) => {
         <div className="article__head">
           <h1>{ frontmatter.title }</h1>
           <div className="article__details">
-            <time datetime={ frontmatter.date }>{ date() }</time>
+            <time dateTime={ frontmatter.date }>{ date() }</time>
           </div>
         </div>
         <div className="article__body">

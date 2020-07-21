@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import ShareToggle from './ShareToggle';
 
@@ -7,11 +7,22 @@ import TwitterIcon from '../assets/twitter.svg';
 import WhatsappIcon from '../assets/whatsapp.svg';
 
 const ShareBar = ({ page }) => {
-  const [activeShareToggle, setActiveShareToggle] = useState(false);
+  const [active, setActive] = useState(false);
+  const shareLinks = useRef(null);
+
+  const toggleShare = () => {
+    if (active) {
+      setActive(false);
+      setTimeout(() => shareLinks.current.style.display = 'none', 200);
+    } else {
+      shareLinks.current.style.display = 'block';
+      setTimeout(() => setActive(true), 1);
+    }
+  }
 
   return (
-    <div className={ 'floating-header__share' + (activeShareToggle ? ' floating-header__share--active' : '') }>
-      <ul className="floating-header__social">
+    <div className={ 'floating-header__share' + (active ? ' floating-header__share--active' : '') }>
+      <ul className="floating-header__social" ref={ shareLinks }>
         <li>
           <a className="social-icon social-icon--facebook" href={ `https://www.facebook.com/sharer.php?u=${window.location.href}` } target="_blank" rel="noreferrer" title="Compartir en Facebook">
             <FacebookIcon />
@@ -28,7 +39,7 @@ const ShareBar = ({ page }) => {
           </a>
         </li>
       </ul>
-      <ShareToggle active={ activeShareToggle } onClick={ () => setActiveShareToggle(!activeShareToggle) } />
+      <ShareToggle active={ active } onClick={ toggleShare } />
     </div>
   );
 }
