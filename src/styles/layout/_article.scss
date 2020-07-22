@@ -33,6 +33,30 @@
     strong {
         font-weight: 700;
     }
+
+    a {
+        --hover-color: hsl(205, 80%, 90%);
+        --active-color: hsl(205, 80%, 80%);
+        border-bottom: 2px solid var(--hover-color);
+        transition: background-color 0.2s ease,
+                    border 0.2s ease,
+                    color 0.2s ease;
+
+        html.dark-mode & {
+            --hover-color: hsl(205, 80%, 20%);
+            --active-color: hsl(205, 80%, 25%);
+        }
+
+        &:hover {
+            background-color: var(--hover-color);
+            color: var(--primary-color);
+        }
+
+        &:active {
+            background-color: var(--active-color);
+            border-color: var(--active-color);
+        }
+    }
 }
 
 // Medium Screens
