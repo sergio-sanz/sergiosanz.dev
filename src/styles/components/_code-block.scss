@@ -42,6 +42,73 @@ pre {
     padding: 2px 4px;
 }
 
+/* Language tags */
+.gatsby-highlight {
+    position: relative;
+}
+
+.gatsby-highlight pre[class*="language-"]::before {
+    border-radius: 0 0 5px 5px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    letter-spacing: 0.025rem;
+    padding: 0.125rem 0.875rem;
+    position: absolute;
+    right: var(--spacing-small);
+    text-align: right;
+    text-transform: uppercase;
+    top: 0;
+}
+
+.gatsby-highlight pre[class*="language-html"]::before {
+    background-color: #e34f26;
+    color: var(--white-color);
+    content: 'html';
+}
+
+.gatsby-highlight pre[class*="language-css"]::before {
+    background-color: #1572b6;
+    color: var(--white-color);
+    content: 'css';
+}
+
+.gatsby-highlight pre[class*="language-js"]::before {
+    background-color: #f7df1e;
+    color: var(--black-color);
+    content: 'js';
+}
+
+.gatsby-highlight pre[class*="language-jsx"]::before {
+    background-color: #61dafb;
+    color: var(--black-color);
+    content: 'jsx';
+}
+
+.gatsby-highlight pre[class*="language-json"]::before {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    content: 'json';
+}
+
+.gatsby-highlight pre[class*="language-php"]::before {
+    background-color: #777bb4;
+    color: var(--white-color);
+    content: 'php';
+}
+
+.gatsby-highlight pre[class*="language-sql"]::before {
+    background-color: #4479a1;
+    color: var(--white-color);
+    content: 'sql';
+}
+
+.gatsby-highlight pre[class*="language-graphql"]::before {
+    background-color: #e10098;
+    color: var(--white-color);
+    content: 'graphql';
+}
+
 /* Syntax colors */
 .token.comment,
 .token.prolog,

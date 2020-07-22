@@ -7,11 +7,13 @@
     --primary-color: hsl(205, 80%, 35%);
     --primary-light-color: hsl(205, 80%, 90%);
     --primary-dark-color: hsl(205, 80%, 10%);
-    --text-color: hsl(0, 0%, 19%);
-    --inverted-text-color: hsl(0, 0%, 90%);
+    --black-color: hsl(0, 0%, 19%);
+    --white-color: hsl(0, 0%, 90%);
+    --gray-color: hsl(0, 0%, 64%);
+    --text-color: var(--black-color);
+    --inverted-text-color: var(--white-color);
     --bg-color: hsl(0, 0%, 100%);
     --border-color: hsl(0, 0%, 92%);
-    --gray-color: hsl(0, 0%, 64%);
     --footer-color: hsl(0, 0%, 94%);
     --selection-color: var(--primary-light-color);
     // Tipografías
