@@ -1,9 +1,13 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-export default ({ pageContext: { frontmatter, html } }) => {
+const posts = ({ data }) => {
+  const { frontmatter, html } = data.markdownRemark;
+
+  // Devuelve la fecha correctamente formateada en español
   const date = () => {
     const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
       const date = new Date(frontmatter.date);
@@ -27,3 +31,17 @@ export default ({ pageContext: { frontmatter, html } }) => {
     </Layout>
   )
 }
+
+export default posts;
+
+export const pageQuery = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        date
+      }
+    }
+  }
+`;

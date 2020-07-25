@@ -1,6 +1,7 @@
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
+// Añade el field 'slug'
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
@@ -15,6 +16,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
+// Crea las rutas de las páginas generadas con los archivos Markdown del directorio 'posts'
+// y les asigna el componente con la template
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
@@ -23,11 +26,6 @@ exports.createPages = async ({ graphql, actions }) => {
       allMarkdownRemark {
         edges {
           node {
-            frontmatter {
-              title
-              date
-            }
-            html
             fields {
               slug
             }
@@ -46,10 +44,7 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: post.node.fields.slug,
       component: postTemplate,
-      context: {
-        frontmatter: post.node.frontmatter,
-        html: post.node.html,
-      }
+      context: { slug: post.node.fields.slug },
     })
   });
 }
