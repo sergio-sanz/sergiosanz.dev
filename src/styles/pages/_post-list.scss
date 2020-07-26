@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    POST LIST STYLES
+\*------------------------------------*/
+
+.posts {
+    padding: var(--spacing-medium) 0;
+
+    h1 {
+        margin-bottom: var(--spacing-medium);
+    }
+}
+
+.post {
+    margin-bottom: var(--spacing-medium);
+}
+
+.post__title {
+    margin-bottom: var(--spacing-small);
+}
+
+.post__excerpt {
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-regular);
+    line-height: 1.75;
+}
