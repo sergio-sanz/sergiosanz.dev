@@ -6,15 +6,14 @@
     padding: var(--spacing-medium) 0;
 }
 
-.article__head {
-    h1 {
-        margin-bottom: var(--spacing-medium);
-    }
+.article__thumbnail,
+.article__title,
+.article__details {
+    margin-bottom: var(--spacing-medium);
 }
 
 .article__details {
     color: var(--gray-color);
-    margin-bottom: var(--spacing-medium);
 }
 
 .article__content {

@@ -28,6 +28,7 @@ const plugins = [
   `gatsby-plugin-sass`,
   `gatsby-plugin-react-svg`,
   `gatsby-plugin-sharp`,
+  `gatsby-transformer-sharp`,
   {
     resolve: `gatsby-source-filesystem`,
     options: {

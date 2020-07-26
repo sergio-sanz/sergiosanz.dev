@@ -1,6 +1,7 @@
 ---
 title: '12 buenas prácticas de HTML y CSS'
 date: '2018-12-01'
+thumbnail: '../../images/html-css.png'
 ---
 
 Escribir código es fácil, lo difícil **es escribir un código de calidad que sea limpio y ordenado**. Para lograr este objetivo se necesita metodología, que se adquiere con la experiencia. Por lo general este proceso conlleva práctica y mucho tiempo, resultando muchas veces abrumador. Afortunadamente existen una serie de buenas prácticas que pueden orientarnos (sobre todo cuando estamos empezando) y que me han ayudado mucho a empezar.

@@ -12,6 +12,7 @@
     padding: 0 var(--spacing-xlarge);
     position: fixed;
     width: 100%;
+    z-index: 10;
 }
 
 .header__logo {
