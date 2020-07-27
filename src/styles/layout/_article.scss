@@ -16,6 +16,10 @@
     color: var(--gray-color);
 }
 
+.article__body {
+    display: flex;
+}
+
 .article__content {
     font-family: var(--font-family-text);
     font-size: var(--font-size-regular);
@@ -56,6 +60,10 @@
             border-color: var(--active-color);
         }
     }
+}
+
+.article__secondary {
+    padding-left: var(--spacing-xlarge);
 }
 
 // Medium Screens

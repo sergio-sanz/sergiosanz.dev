@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    TABLE OF CONTENTS STYLES
+\*------------------------------------*/
+
+.toc {
+    position: sticky;
+    top: calc(var(--header-height) + 7.5rem);
+}
+
+.toc__title {
+    display: block;
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-bottom: var(--spacing-small);
+    text-transform: uppercase;
+}
+
+.toc__nav {
+    padding-left: var(--spacing-small);
+
+    a {
+        display: block;
+        line-height: 48px;
+        max-width: 230px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &:hover,
+        &.active {
+            color: var(--primary-color);
+        }
+    }
+}
+
+.toc__highlighter {
+    height: 48px;
+    left: 0;
+    position: absolute;
+    transition: bottom 0.2s ease;
+    width: 2px;
+
+    &::before {
+        background-color: var(--primary-color);
+        content: '';
+        height: 18px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+}

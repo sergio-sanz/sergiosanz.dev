@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import TOC from '../components/TOC';
 
 const posts = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
@@ -28,6 +29,9 @@ const posts = ({ data }) => {
         </div>
         <div className="article__body">
           <div className="article__content" dangerouslySetInnerHTML={{ __html: html }} />
+          <aside className="article__secondary">
+            <TOC />
+          </aside>
         </div>
       </article>
     </Layout>
