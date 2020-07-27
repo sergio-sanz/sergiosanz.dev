@@ -54,7 +54,7 @@ const TOC = () => {
         <nav className="toc__nav">
           { headingActive >= 0 && <div className="toc__highlighter" style={{ bottom: `${((headings.titles.length - 1) * 48) - headingActive * 48}px` }}></div> }
           {headings.titles.map(({ title }, index) => (
-            <a href="#" className={ headingActive === index ? 'active' : '' } onClick={e => {
+            <button key={ title } className={ 'toc__link' + (headingActive === index ? ' toc__link--active' : '') } onClick={e => {
               e.preventDefault();
               headings.nodes[index].scrollIntoView({
                 behavior: 'smooth',
@@ -62,7 +62,7 @@ const TOC = () => {
               })
             }}>
               { title }
-            </a>
+            </button>
           ))}
         </nav>
       </div> }
