@@ -24,7 +24,7 @@ code {
 /* Code blocks */
 pre {
     background-color: hsl(0, 0%, 22%);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     overflow-x: auto;
 
     code {
@@ -48,7 +48,7 @@ pre {
 }
 
 .gatsby-highlight pre[class*="language-"]::before {
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
     font-family: var(--font-family);
     font-size: var(--font-size-small);
     font-weight: 600;

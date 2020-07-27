@@ -14,6 +14,19 @@
     margin-bottom: var(--spacing-medium);
 }
 
+.post__wrapper {
+    align-items: center;
+    display: flex;
+}
+
+.post__thumbnail {
+    border-radius: var(--border-radius);
+    margin-right: var(--spacing-large);
+    max-width: 300px;
+    overflow: hidden;
+    width: 100%;
+}
+
 .post__title {
     margin-bottom: var(--spacing-small);
 }
@@ -22,4 +35,17 @@
     font-family: var(--font-family-text);
     font-size: var(--font-size-regular);
     line-height: 1.75;
+}
+
+// Medium Screens
+@media screen and (max-width: map-get($breakpoints, medium)) {
+    .post__wrapper {
+        flex-direction: column;
+    }
+
+    .post__thumbnail {
+        margin-bottom: var(--spacing-small);
+        margin-right: 0;
+        max-width: 100%;
+    }
 }
