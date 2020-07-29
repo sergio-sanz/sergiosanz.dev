@@ -50,3 +50,47 @@
         width: 100%;
     }
 }
+
+.toc-toggle {
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    bottom: var(--spacing-medium);
+    box-shadow: -5px 0 10px hsla(0, 0%, 0%, 0.1);
+    height: 60px;
+    position: fixed;
+    padding: 1.5em;
+    right: 0;
+    transform: translateX(50%);
+    transition: transform 0.2s ease;
+    width: 60px;
+
+    &::after {
+        border-color: currentColor;
+        border-right: 3px solid;
+        border-top: 3px solid;
+        content: '';
+        display: block;
+        height: 11px;
+        left: 15px;
+        perspective: 5.5px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(225deg);
+        transition: transform 0.3s ease 0.1s;
+        width: 11px;
+    }
+
+    &--active {
+        transform: translateX(-248px);
+
+        &::after {
+            transform: translateY(-50%) translateX(-50%) rotateY(0.5turn) rotate(225deg);
+        }
+    }
+}
+
+@media screen and (min-width: map-get($breakpoints, large)) {
+    .toc-toggle {
+        display: none;
+    }
+}

@@ -32,7 +32,7 @@
 }
 
 // Medium Screens or smaller
-@media screen and (min-width: map-get($breakpoints, large)) {
+@media screen and (min-width: map-get($breakpoints, xlarge)) {
     .social-icon--whatsapp {
         display: none;
     }

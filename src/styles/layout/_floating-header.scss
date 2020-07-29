@@ -86,7 +86,7 @@
 }
 
 // Medium Screens
-@media screen and (max-width: map-get($breakpoints, large)) {
+@media screen and (max-width: map-get($breakpoints, xlarge)) {
     .floating-header__content {
         padding: 0 var(--spacing-medium);
     }

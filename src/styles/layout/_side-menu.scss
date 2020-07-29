@@ -61,7 +61,11 @@
 }
 
 // Medium Screens
-@media screen and (max-width: map-get($breakpoints, large)) {
+@media screen and (max-width: map-get($breakpoints, xlarge)) {
+    .side-menu__content {
+        max-width: 360px;
+    }
+
     .side-menu__content ul li a {
         padding: var(--spacing-medium) var(--spacing-medium);
     }
@@ -69,6 +73,10 @@
 
 // Small Screens
 @media screen and (max-width: map-get($breakpoints, small)) {
+    .side-menu__content {
+        max-width: 280px;
+    }
+
     .side-menu__content ul li a {
         padding: var(--spacing-medium) var(--spacing-small);
     }

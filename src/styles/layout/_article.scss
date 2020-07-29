@@ -26,6 +26,7 @@
     font-size: var(--font-size-regular);
     line-height: 1.75;
     max-width: var(--article-width);
+    min-width: 0;
 
     h2,
     h3,
@@ -80,7 +81,6 @@
 .more__prev,
 .more__next {
     overflow: hidden;
-
     transition: background-color 0.2s ease,
                 color 0.2s ease;
     width: 100%;
@@ -141,8 +141,37 @@
 }
 
 // Medium Screens
-@media screen and (max-width: map-get($breakpoints, large)) {
+@media screen and (max-width: map-get($breakpoints, xlarge)) {
     .article__content {
         font-size: 1em;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, large)) {
+    .article__secondary {
+        background-color: var(--bg-color);
+        height: 100%;
+        overflow-y: auto;
+        padding: var(--spacing-small);
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: translateX(100%);
+        transition: transform 0.2s ease;
+        z-index: 30;
+
+        &--active {
+            box-shadow: -5px 0 10px hsla(0, 0%, 0%, 0.1);
+            transform: translateX(0);
+        }
+
+        .toc {
+            top: 0;
+        }
+
+        .toc__title {
+            margin-top: 10px;
+            margin-bottom: 24px;
+        }
     }
 }
