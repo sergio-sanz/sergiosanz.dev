@@ -5,7 +5,6 @@
 .icon--moon,
 .icon--moon::after {
     border-radius: 50%;
-    box-sizing: border-box;
     display: block;
 }
 
@@ -22,6 +21,7 @@
 .icon--moon::after {
     border: 2px solid transparent;
     box-shadow: 0 0 0 2px;
+    box-sizing: border-box;
     content: '';
     height: 18px;
     left: 2px;

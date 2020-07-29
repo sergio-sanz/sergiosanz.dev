@@ -6,7 +6,6 @@
 .icon--menu::after,
 .icon--menu::before {
     background-color: currentColor;
-    box-sizing: border-box;
     display: block;
     height: 3px;
     position: relative;
@@ -15,6 +14,7 @@
 
 .icon--menu::after,
 .icon--menu::before {
+    box-sizing: border-box;
     content: '';
     position: absolute;
     top: -8px;

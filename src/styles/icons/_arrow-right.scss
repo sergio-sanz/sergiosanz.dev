@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    ARROW RIGHT ICON
+\*------------------------------------*/
+
+.icon--arrow-right {
+    display: block;
+    height: 22px;
+    position: relative;
+    width: 22px;
+}
+
+.icon--arrow-right::after,
+.icon--arrow-right::before {
+    box-sizing: border-box;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 3px;
+}
+
+.icon--arrow-right::after {
+    border-right: 2px solid;
+    border-top: 2px solid;
+    bottom: 7px;
+    height: 8px;
+    transform: rotate(45deg);
+    width: 8px;
+}
+
+.icon--arrow-right::before {
+    background-color: currentColor;
+    bottom: 10px;
+    height: 2px;
+    width: 16px;
+}

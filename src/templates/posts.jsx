@@ -1,12 +1,12 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import TOC from '../components/TOC';
 
-const posts = ({ data }) => {
+const posts = ({ data, pageContext }) => {
   const { frontmatter, html } = data.markdownRemark;
 
   // Devuelve la fecha correctamente formateada en español
@@ -15,6 +15,9 @@ const posts = ({ data }) => {
       const date = new Date(frontmatter.date);
       return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
   }
+
+  const prev = pageContext.prev || null;
+  const next = pageContext.next || null;
 
   return (
     <Layout page={ frontmatter }>
@@ -32,6 +35,32 @@ const posts = ({ data }) => {
           <aside className="article__secondary">
             <TOC />
           </aside>
+        </div>
+        <div className="article__footer">
+          <div className="article__more">
+            { prev &&
+              <Link to={ prev.fields.slug } className="more__prev">
+                <div className="more__wrapper">
+                <i className="icon icon--arrow-left"></i>
+                  <div className="more__text">
+                    <span>Anterior</span>
+                    <h2>{ prev.frontmatter.title }</h2>
+                  </div>
+                </div>
+              </Link>
+            }
+            { next &&
+              <Link to={ next.fields.slug } className="more__next">
+                <div className="more__wrapper">
+                  <div className="more__text">
+                    <span>Siguiente</span>
+                    <h2>{ next.frontmatter.title }</h2>
+                  </div>
+                  <i className="icon icon--arrow-right"></i>
+                </div>
+              </Link>
+            }
+          </div>
         </div>
       </article>
     </Layout>
