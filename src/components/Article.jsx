@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
+import React, { useRef, useState,  } from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 import TOC from '../components/TOC';
+import useOutsideClick from '../hooks/useOutsideClick';
 
 const Article = ({ frontmatter, html, pageContext }) => {
+  const ref = useRef();
   const [TOCActive, setTOCActive] = useState(false);
+
+  useOutsideClick(ref, () => {
+    if (TOCActive) {
+      setTOCActive(false);
+    }
+  });
 
   // Devuelve la fecha correctamente formateada en español
   const date = () => {
@@ -28,7 +36,7 @@ const Article = ({ frontmatter, html, pageContext }) => {
       </div>
       <div className="article__body">
         <div className="article__content" dangerouslySetInnerHTML={{ __html: html }} />
-        <aside className={ 'article__secondary' + (TOCActive ? ' article__secondary--active' : '') }>
+        <aside className={ 'article__secondary' + (TOCActive ? ' article__secondary--active' : '') } ref={ ref }>
           <TOC />
         </aside>
       </div>
