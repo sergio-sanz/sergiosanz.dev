@@ -1,4 +1,4 @@
-import React, { useRef, useState,  } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -14,6 +14,21 @@ const Article = ({ frontmatter, html, pageContext }) => {
       setTOCActive(false);
     }
   });
+
+  // Guarda todos los encabezados 'h2' de la página
+  const [headings, setHeadings] = useState({
+    titles: [],
+    nodes: [],
+  });
+
+  // Recupera todos los encabezados de la página y los almacena en el estado
+  useEffect(() => {
+    const nodes = Array.from(document.querySelectorAll('.article__content h2'));
+    const titles = nodes.map(node => ({
+      title: node.innerText,
+    }));
+    setHeadings({ titles, nodes });
+  }, [setHeadings]);
 
   // Devuelve la fecha correctamente formateada en español
   const date = () => {
@@ -37,7 +52,7 @@ const Article = ({ frontmatter, html, pageContext }) => {
       <div className="article__body">
         <div className="article__content" dangerouslySetInnerHTML={{ __html: html }} />
         <aside className={ 'article__secondary' + (TOCActive ? ' article__secondary--active' : '') } ref={ ref }>
-          <TOC />
+          <TOC headings={ headings } />
         </aside>
       </div>
       <div className="article__footer">
@@ -66,13 +81,13 @@ const Article = ({ frontmatter, html, pageContext }) => {
           }
         </div>
       </div>
-      <button
+      { headings.titles.length > 0 && <button
         className={ 'toc-toggle' + (TOCActive ? ' toc-toggle--active' : '') }
         role="switch"
         aria-checked={ TOCActive }
         aria-label="Contenidos"
         onClick={ () => setTOCActive(!TOCActive) }>
-      </button>
+      </button> }
     </article>
   );
 }

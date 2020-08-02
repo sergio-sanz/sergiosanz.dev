@@ -9,24 +9,9 @@ const accumulateOffsetTop = (el, totalOffset = 0) => {
   return totalOffset;
 }
 
-const TOC = () => {
-  // Guarda todos los encabezados 'h2' de la página
-  const [headings, setHeadings] = useState({
-    titles: [],
-    nodes: [],
-  });
-
+const TOC = ({ headings }) => {
   // Establece que encabezado está actualmente activo en pantalla
   const [headingActive, setHeadingActive] = useState();
-
-  // Recupera todos los encabezados de la página y los almacena en el estado
-  useEffect(() => {
-    const nodes = Array.from(document.querySelectorAll('.article__content h2'));
-    const titles = nodes.map(node => ({
-      title: node.innerText,
-    }));
-    setHeadings({ titles, nodes });
-  }, [setHeadings]);
 
   // Añade un 'scroll listener'
   useEffect(() => {
