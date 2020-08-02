@@ -23,10 +23,10 @@
     background-color: var(--bg-color);
     box-shadow: inset -1px 0 0 var(--border-color);
     height: calc(100% - var(--header-height));
-    max-width: 450px;
     overflow-y: auto;
     transform: translateX(-100%);
     transition: transform 0.2s ease;
+    width: clamp(280px, 70vw, 450px);
 
     html.dark-mode & {
         --hover-color: hsla(0, 0%, 100%, 0.06);
@@ -62,10 +62,6 @@
 
 // Medium Screens
 @media screen and (max-width: map-get($breakpoints, xlarge)) {
-    .side-menu__content {
-        max-width: 360px;
-    }
-
     .side-menu__content ul li a {
         padding: var(--spacing-medium) var(--spacing-medium);
     }
@@ -73,10 +69,6 @@
 
 // Small Screens
 @media screen and (max-width: map-get($breakpoints, small)) {
-    .side-menu__content {
-        max-width: 280px;
-    }
-
     .side-menu__content ul li a {
         padding: var(--spacing-medium) var(--spacing-small);
     }
