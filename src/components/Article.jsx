@@ -2,10 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-import TOC from '../components/TOC';
+import Details from './Details';
+import TOC from './TOC';
 import useOutsideClick from '../hooks/useOutsideClick';
 
-const Article = ({ frontmatter, html, pageContext }) => {
+const Article = ({ frontmatter, html, timeToRead, pageContext }) => {
   const ref = useRef();
   const [TOCActive, setTOCActive] = useState(false);
 
@@ -30,13 +31,6 @@ const Article = ({ frontmatter, html, pageContext }) => {
     setHeadings({ titles, nodes });
   }, [setHeadings]);
 
-  // Devuelve la fecha correctamente formateada en español
-  const date = () => {
-    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-      const date = new Date(frontmatter.date);
-      return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
-  }
-
   const prev = pageContext.prev || null;
   const next = pageContext.next || null;
 
@@ -46,7 +40,7 @@ const Article = ({ frontmatter, html, pageContext }) => {
         { frontmatter.thumbnail && <Img className="article__thumbnail" fluid={ frontmatter.thumbnail.childImageSharp.fluid } /> }
         <h1 className="article__title">{ frontmatter.title }</h1>
         <div className="article__details">
-          <time dateTime={ frontmatter.date }>{ date() }</time>
+          <Details date={ frontmatter.date } timeToRead={ timeToRead } />
         </div>
       </div>
       <div className="article__body">

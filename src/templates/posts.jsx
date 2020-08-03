@@ -6,12 +6,12 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
 const posts = ({ data, pageContext }) => {
-  const { frontmatter, html } = data.markdownRemark;
+  const { frontmatter, html, timeToRead } = data.markdownRemark;
 
   return (
     <Layout page={ frontmatter }>
       <SEO title={ frontmatter.title } />
-      <Article frontmatter={ frontmatter } html={ html } pageContext={ pageContext } />
+      <Article frontmatter={ frontmatter } html={ html } timeToRead={ timeToRead } pageContext={ pageContext } />
     </Layout>
   )
 }
@@ -22,6 +22,7 @@ export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      timeToRead
       frontmatter {
         title
         date

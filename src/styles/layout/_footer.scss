@@ -27,25 +27,8 @@
         display: inline-flex;
         flex-wrap: wrap;
 
-        li:not(:first-child) {
-            padding-left: 16px;
-            position: relative;
-
-            &:before {
-                background-color: var(--gray-color);
-                border-radius: 50%;
-                content: '';
-                height: 2px;
-                left: 0;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 2px;
-            }
-        }
-
-        li:not(:last-child) {
-            margin-right: 14px;
+        li {
+            @include separator(14px);
         }
     }
 

@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    MINIMALIST SEPARATOR
+\*------------------------------------*/
+
+@mixin separator($spacing: 8px, $size: 2px) {
+    &:not(:first-child) {
+        padding-left: $spacing + $size;
+        position: relative;
+
+        &:before {
+            background-color: currentColor;
+            border-radius: 50%;
+            content: '';
+            height: $size;
+            left: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: $size;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-right: $spacing;
+    }
+}

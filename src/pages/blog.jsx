@@ -25,6 +25,7 @@ export const pageQuery = graphql`
         node {
           id
           excerpt(pruneLength: 240)
+          timeToRead
           fields {
             slug
           }

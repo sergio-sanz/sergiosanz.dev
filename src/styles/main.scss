@@ -1,3 +1,6 @@
+// Abstracts (código que no existe en el CSS compilado)
+@import "abstracts/mixins";
+
 // Base
 @import "base/reset";
 @import "base/vars";
@@ -6,6 +9,7 @@
 
 // Components
 @import "components/code-block";
+@import "components/details";
 @import "components/reading-progress";
 @import "components/social-icon";
 @import "components/toc";
