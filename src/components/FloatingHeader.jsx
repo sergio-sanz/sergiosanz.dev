@@ -6,6 +6,7 @@ import ShareBar from './ShareBar';
 const FloatingHeader = ({ page, post }) => {
   const [active, setActive] = useState(false);
 
+  // Añade un 'scroll listener' para activar el encabezado flotante
   useEffect(() => {
     const scrollListener = () => {
       setActive(window.pageYOffset > 100);
@@ -16,7 +17,7 @@ const FloatingHeader = ({ page, post }) => {
     return () => {
       document.removeEventListener('scroll', scrollListener);
     }
-  })
+  });
 
   return (
     <div className={ 'floating-header' + (active ? ' floating-header--active' : '') }>

@@ -39,9 +39,9 @@ const Article = ({ frontmatter, html, timeToRead, pageContext }) => {
       <div className="article__head">
         { frontmatter.thumbnail && <Img className="article__thumbnail" fluid={ frontmatter.thumbnail.childImageSharp.fluid } /> }
         <h1 className="article__title">{ frontmatter.title }</h1>
-        <div className="article__details">
+        { frontmatter.date && <div className="article__details">
           <Details date={ frontmatter.date } timeToRead={ timeToRead } />
-        </div>
+        </div> }
       </div>
       <div className="article__body">
         <div className="article__content" dangerouslySetInnerHTML={{ __html: html }} />
