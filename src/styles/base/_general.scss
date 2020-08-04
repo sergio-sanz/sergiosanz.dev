@@ -20,6 +20,7 @@ body,
 a {
     color: inherit;
     text-decoration: none;
+    @extend %focus-visible;
 }
 
 button {
@@ -28,8 +29,8 @@ button {
     color: inherit;
     cursor: pointer;
     font: inherit;
-    outline: 0;
     padding: 0;
+    @extend %focus-visible;
 }
 
 ::selection {
@@ -41,5 +42,5 @@ button {
 }
 
 .gatsby-resp-image-image {
-    outline: 0;
+    @extend %focus-visible;
 }

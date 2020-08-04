@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import 'focus-visible';
 
 import Footer from './Footer';
 import Header from './Header';
