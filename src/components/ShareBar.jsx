@@ -24,17 +24,17 @@ const ShareBar = ({ page }) => {
     <div className={ 'floating-header__share' + (active ? ' floating-header__share--active' : '') }>
       <ul className="floating-header__social" ref={ shareLinks }>
         <li>
-          <a className="social-icon social-icon--facebook" href={ `https://www.facebook.com/sharer.php?u=${window.location.href}` } target="_blank" rel="noreferrer" title="Compartir en Facebook">
+          <a className="social-icon social-icon--facebook" href={ typeof window !== 'undefined' ? `https://www.facebook.com/sharer.php?u=${window.location.href}` : '' } target="_blank" rel="noreferrer" title="Compartir en Facebook">
             <FacebookIcon />
           </a>
         </li>
         <li>
-          <a className="social-icon social-icon--twitter" href={ `https://twitter.com/intent/tweet?url=${window.location.href}&text=${page.title}` } target="_blank" rel="noreferrer" title="Compartir en Twitter">
+          <a className="social-icon social-icon--twitter" href={ typeof window !== 'undefined' ? `https://twitter.com/intent/tweet?url=${window.location.href}&text=${page.title}` : '' } target="_blank" rel="noreferrer" title="Compartir en Twitter">
             <TwitterIcon />
           </a>
         </li>
         <li>
-          <a className="social-icon social-icon--whatsapp" href={ `whatsapp://send?text=${page.title} ${window.location.href}` }>
+          <a className="social-icon social-icon--whatsapp" href={ typeof window !== 'undefined' ? `whatsapp://send?text=${page.title} ${window.location.href}` : '' }>
             <WhatsappIcon />
           </a>
         </li>
