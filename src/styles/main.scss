@@ -9,6 +9,7 @@
 @import "base/typography";
 
 // Components
+@import "components/button";
 @import "components/code-block";
 @import "components/details";
 @import "components/reading-progress";
@@ -33,4 +34,5 @@
 @import "layout/side-menu";
 
 // Pages
+@import "pages/error-page";
 @import "pages/post-list";

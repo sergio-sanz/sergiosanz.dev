@@ -3,7 +3,7 @@ title: 'Política de Cookies'
 thumbnail: '../images/cookies.jpg'
 ---
 
-Las cookies son pequeños archivos de texto plano, que se descargan en su ordenador y que no son mayores de 5kb. Las cookies permiten a una página web, entre otras cosas, almacenar y recuperar información sobre los hábitos de navegación de un usuario, de su equipo, y dependiendo de la información que contengan y de la forma en que utilice su equipo, pueden utilizarse para reconocer al usuario. Como la amplia mayoría de sitios web, sergiosanzweb.com utiliza cookies para mejorar la experiencia de usuario.
+Las cookies son pequeños archivos de texto plano, que se descargan en su ordenador y que no son mayores de 5kb. Las cookies permiten a una página web, entre otras cosas, almacenar y recuperar información sobre los hábitos de navegación de un usuario, de su equipo, y dependiendo de la información que contengan y de la forma en que utilice su equipo, pueden utilizarse para reconocer al usuario. Como la amplia mayoría de sitios web, **sergiosanz.dev** utiliza cookies para mejorar la experiencia de usuario.
 
 ## Tipos de cookies
 
@@ -31,7 +31,7 @@ Y según su finalidad:
 
 ## Uso de cookies
 
-Las cookies de sergiosanzweb.com ayudan a que el sitio funcione correctamente, guarde sesiones, recuerde ajustes o preferencias, permitirle visualizar vídeos, mejorar la velocidad y seguridad, mostrarte anuncios en función de sus hábitos de navegación y guarde información demográfica, geográfica o su proveedor de internet entre otros, con fines meramente analíticos.
+Las cookies de **sergiosanz.dev** ayudan a que el sitio funcione correctamente, guarde sesiones, recuerde ajustes o preferencias, permitirle visualizar vídeos, mejorar la velocidad y seguridad, mostrarte anuncios en función de sus hábitos de navegación y guarde información demográfica, geográfica o su proveedor de internet entre otros, con fines meramente analíticos.
 
 Bajo ninguna circustancia utilizaré cookies para recoger información personal o sensible sin su consentimiento expreso, ni compartiré datos de identificación personal a terceros.
 

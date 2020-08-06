@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    BUTTON STYLES
+\*------------------------------------*/
+
+.button {
+    --button-hover-color: var(--primary-light-color);
+    border: 1px solid currentColor;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0.75rem var(--spacing-small);
+    text-transform: uppercase;
+    transition: background-color 0.2s ease,
+                box-shadow 0.2s ease,
+                color 0.2s ease;
+
+    html.dark-mode & {
+        --button-hover-color: var(--primary-dark-color);
+    }
+
+    &:hover {
+        background-color: var(--button-hover-color);
+        color: var(--primary-color);
+    }
+
+    &:active {
+        box-shadow: inset 0 3px 5px hsla(0, 0%, 0%, 0.25);
+    }
+}
