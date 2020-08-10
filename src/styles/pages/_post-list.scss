@@ -10,6 +10,44 @@
     }
 }
 
+.posts__head {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-medium);
+
+    h1 {
+        font-size: 2.35rem;
+        margin-bottom: 0;
+        margin-right: var(--spacing-medium)
+    }
+
+    a {
+        color: var(--primary-color);
+        font-weight: 600;
+        padding-right: 1em;
+        position: relative;
+
+        &::after {
+            border-bottom: 2px solid currentColor;
+            border-right: 2px solid currentColor;
+            content: '';
+            height: 6px;
+            position: absolute;
+            top: 50%;
+            transform: translate(6px, -50%) rotate(-45deg);
+            transition: transform 0.2s ease;
+            width: 6px;
+        }
+
+        &:hover::after {
+            transform: translate(10px, -50%) rotate(-45deg);
+        }
+    }
+}
+
 .post {
     margin-bottom: var(--spacing-medium);
 }

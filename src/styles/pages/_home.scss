@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    HOME PAGE STYLES
+\*------------------------------------*/
+
+.home {
+    background-color: var(--footer-color);
+    line-height: 1.35;
+    padding: var(--spacing-xlarge) 0;
+
+    h1 {
+        max-width: 600px;
+    }
+}

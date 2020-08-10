@@ -11,7 +11,12 @@ const BlogPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <PostList title="Blog" posts={ posts } />
+      <div className="wrapper">
+        <section className="posts">
+          <h1>Blog</h1>
+          <PostList posts={ posts } />
+        </section>
+      </div>
     </Layout>
   );
 }

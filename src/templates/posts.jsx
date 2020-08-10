@@ -11,7 +11,9 @@ const posts = ({ data, pageContext }) => {
   return (
     <Layout page={ frontmatter }>
       <SEO title={ frontmatter.title } />
-      <Article frontmatter={ frontmatter } html={ html } timeToRead={ timeToRead } pageContext={ pageContext } />
+      <div className="wrapper">
+        <Article frontmatter={ frontmatter } html={ html } timeToRead={ timeToRead } pageContext={ pageContext } />
+      </div>
     </Layout>
   )
 }

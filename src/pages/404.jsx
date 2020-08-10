@@ -10,14 +10,16 @@ const notFound = () => {
   return (
     <Layout>
       <SEO title="Página no encontrada" />
-      <section className="error-page">
-        <div className="error-page__wrapper">
-          <Error404 />
-          <h1>Página no encontrada</h1>
-          <p>La página solicitada no existe o dejó de estar disponible.</p>
-          <Link to="/" className="button">Volver al principio</Link>
-        </div>
-      </section>
+      <div className="wrapper">
+        <section className="error-page">
+          <div className="error-page__wrapper">
+            <Error404 />
+            <h1>Página no encontrada</h1>
+            <p>La página solicitada no existe o dejó de estar disponible.</p>
+            <Link to="/" className="button">Volver al principio</Link>
+          </div>
+        </section>
+      </div>
     </Layout>
   );
 }

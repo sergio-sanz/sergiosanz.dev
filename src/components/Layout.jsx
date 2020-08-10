@@ -12,9 +12,7 @@ const Layout = props => {
     <>
       <Header page={ props.page } post={ post } />
       <main className="main" ref={ post }>
-        <div className="wrapper">
-          { props.children }
-        </div>
+        { props.children }
       </main>
       <Footer />
     </>

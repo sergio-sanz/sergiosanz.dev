@@ -4,10 +4,9 @@ import Img from 'gatsby-image';
 
 import Details from './Details';
 
-const PostList = ({ title, posts }) => {
+const PostList = ({ posts }) => {
   return (
-    <section className="posts">
-      <h1>{ title }</h1>
+    <>
       { posts.map(post => (
         <article key={ post.node.id } className="post">
           <Link to={ post.node.fields.slug } className="post__wrapper">
@@ -24,7 +23,7 @@ const PostList = ({ title, posts }) => {
           </Link>
         </article>
       )) }
-    </section>
+    </>
   );
 }
 
