@@ -20,9 +20,6 @@ const SideMenu = ({ openSide, setOpenSide }) => {
             <Link to="/">Inicio</Link>
           </li>
           <li>
-            <Link to="/proyectos">Proyectos</Link>
-          </li>
-          <li>
             <Link to="/blog">Blog</Link>
           </li>
           <li>
