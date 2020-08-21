@@ -20,7 +20,7 @@
 .article__content {
     font-family: var(--font-family-text);
     font-size: var(--font-size-regular);
-    line-height: 1.75;
+    line-height: 2em;
     max-width: var(--article-width);
     min-width: 0;
     overflow-wrap: break-word;
@@ -29,7 +29,8 @@
     h3,
     p,
     pre,
-    ul {
+    ul,
+    blockquote {
         margin-bottom: 1.125rem;
     }
 
@@ -71,6 +72,19 @@
 
     li {
         margin-left: var(--spacing-medium);
+    }
+
+    blockquote {
+        border-bottom: 1px solid var(--primary-color);
+        border-top: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        font-style: italic;
+        padding: var(--spacing-small) 0;
+        text-align: center;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -150,13 +164,14 @@
     }
 }
 
-// Medium Screens
+// Not so large Screens
 @media screen and (max-width: map-get($breakpoints, xlarge)) {
     .article__content {
         font-size: 1em;
     }
 }
 
+// Medium Screens
 @media screen and (max-width: map-get($breakpoints, large)) {
     .article__secondary {
         background-color: var(--bg-color);
@@ -183,5 +198,12 @@
             margin-top: 10px;
             margin-bottom: 24px;
         }
+    }
+}
+
+// Small Screens
+@media screen and (max-width: map-get($breakpoints, small)) {
+    .article__content ul li {
+        margin-left: var(--spacing-small);
     }
 }
