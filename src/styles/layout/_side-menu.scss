@@ -3,6 +3,7 @@
 \*------------------------------------*/
 
 .side-menu {
+    --overlay-color: hsla(0, 0%, 0%, 0.4);
     height: 100%;
     left: 0;
     pointer-events: none;
@@ -13,8 +14,12 @@
     z-index: 10;
 
     &--active {
-        background-color: hsla(0, 0%, 0%, 0.4);
+        background-color: var(--overlay-color);
         pointer-events: auto;
+    }
+
+    html.dark-mode & {
+        --overlay-color: hsla(0, 0%, 0%, 0.6);
     }
 }
 

@@ -29,8 +29,7 @@
     h3,
     p,
     pre,
-    ul,
-    blockquote {
+    ul {
         margin-bottom: 1.125rem;
     }
 
@@ -79,8 +78,13 @@
         border-top: 1px solid var(--primary-color);
         color: var(--primary-color);
         font-style: italic;
+        margin: var(--spacing-large) var(--spacing-medium);
         padding: var(--spacing-small) 0;
         text-align: center;
+
+        code {
+            font-style: normal;
+        }
 
         p:last-child {
             margin-bottom: 0;
@@ -104,13 +108,15 @@
 
 .more__prev,
 .more__next {
+    --hover-color: hsl(205, 80%, 90%);
+    --active-color: hsl(205, 80%, 80%);
     overflow: hidden;
     transition: background-color 0.2s ease,
                 color 0.2s ease;
     width: 100%;
 
     &:hover {
-        background-color: hsl(205, 80%, 90%);
+        background-color: var(--hover-color);
         color: var(--primary-color);
 
         .more__wrapper {
@@ -119,7 +125,12 @@
     }
 
     &:active {
-        background-color: hsl(205, 80%, 80%);
+        background-color: var(--active-color);
+    }
+
+    html.dark-mode & {
+        --hover-color: hsl(205, 80%, 10%);
+        --active-color: hsl(205, 80%, 20%);
     }
 }
 
@@ -205,5 +216,13 @@
 @media screen and (max-width: map-get($breakpoints, small)) {
     .article__content ul li {
         margin-left: var(--spacing-small);
+    }
+
+    .article__content blockquote {
+        margin: var(--spacing-large) var(--spacing-small);
+    }
+
+    .article__more {
+        flex-wrap: wrap;
     }
 }

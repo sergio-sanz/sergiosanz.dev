@@ -4,10 +4,11 @@
 
 .footer {
     background-color: var(--footer-color);
-    color: var(--gray-color);
+    color: var(--footer-text-color);
     flex-shrink: 0;
     font-size: var(--font-size-small);
-    height: var(--footer-height);
+    line-height: 1.6;
+    padding: var(--spacing-small) 0;
 
     .wrapper {
         align-items: center;
@@ -32,11 +33,7 @@
         }
     }
 
-    a {
-        transition: color 0.2s ease;
-
-        &:hover {
-            color: var(--text-color);
-        }
+    a:hover {
+        color: var(--primary-color);
     }
 }

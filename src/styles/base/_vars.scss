@@ -9,12 +9,13 @@
     --primary-dark-color: hsl(205, 80%, 10%);
     --black-color: hsl(0, 0%, 19%);
     --white-color: hsl(0, 0%, 90%);
-    --gray-color: hsl(0, 0%, 64%);
+    --gray-color: hsl(0, 0%, 46%);
     --text-color: var(--black-color);
     --inverted-text-color: var(--white-color);
     --bg-color: hsl(0, 0%, 100%);
     --border-color: hsl(0, 0%, 92%);
     --footer-color: hsl(0, 0%, 94%);
+    --footer-text-color: hsl(0, 0%, 42%);
     --selection-color: var(--primary-light-color);
     // Tipografías
     --font-family: 'Barlow', sans-serif;
@@ -31,17 +32,19 @@
     --spacing-medium: 1.875rem;
     --spacing-small: 1rem;
     // Tamaños
-    --border-radius: 5px;
+    --border-radius: 3px;
     --header-height: 70px;
-    --footer-height: 60px;
     --max-width-wrapper: 1080px;
 }
 
 html.dark-mode {
+    --gray-color: hsl(0, 0%, 50%);
     --text-color: hsl(0, 0%, 90%);
-    --bg-color: hsl(205, 55%, 7%);
-    --border-color: hsl(205, 55%, 15%);
-    --footer-color: hsl(205, 55%, 9%);
+    --bg-color: hsl(0, 0%, 8%);
+    --border-color: hsl(0, 0%, 16%);
+    --footer-color: hsl(0, 0%, 14%);
+    --footer-text-color: hsl(0, 0%, 54%);
+    --selection-color: hsla(205, 80%, 35%, 0.25);
 }
 
 /*------------------------------------*\
