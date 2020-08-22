@@ -226,3 +226,14 @@
         flex-wrap: wrap;
     }
 }
+
+// Not transitions
+@media (prefers-reduced-motion: reduce) {
+    .article__content a,
+    .article__secondary,
+    .more__wrapper,
+    .more__prev,
+    .more__next {
+        transition: none;
+    }
+}

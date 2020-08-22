@@ -78,3 +78,12 @@
         padding: var(--spacing-medium) var(--spacing-small);
     }
 }
+
+// Not transitions
+@media (prefers-reduced-motion: reduce) {
+    .side-menu,
+    .side-menu__content,
+    .side-menu__content ul li a {
+        transition: none;
+    }
+}

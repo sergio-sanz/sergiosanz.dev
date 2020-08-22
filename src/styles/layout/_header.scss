@@ -76,3 +76,10 @@
         padding: 0 var(--spacing-small);
     }
 }
+
+// Not transitions
+@media (prefers-reduced-motion: reduce) {
+    .header__button::before {
+        transition: none;
+    }
+}

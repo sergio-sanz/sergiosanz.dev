@@ -44,3 +44,11 @@
 .header__button:hover .icon--arrow-up::before {
     height: 18px;
 }
+
+// Not transitions
+@media (prefers-reduced-motion: reduce) {
+    .icon--arrow-up,
+    .icon--arrow-up::before {
+        transition: none;
+    }
+}

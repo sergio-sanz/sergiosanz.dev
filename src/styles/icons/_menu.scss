@@ -48,3 +48,12 @@
 .icon--active.icon--menu {
     width: 0;
 }
+
+// Not transitions
+@media (prefers-reduced-motion: reduce) {
+    .icon--menu,
+    .icon--menu::after,
+    .icon--menu::before {
+        transition: none;
+    }
+}

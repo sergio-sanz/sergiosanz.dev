@@ -102,3 +102,12 @@
         padding: 0 var(--spacing-small);
     }
 }
+
+// Not transitions
+@media (prefers-reduced-motion: reduce) {
+    .floating-header,
+    .floating-header__share .floating-header__social li,
+    .floating-header__share .icon {
+        transition: none;
+    }
+}

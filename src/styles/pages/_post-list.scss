@@ -88,3 +88,10 @@
         max-width: 100%;
     }
 }
+
+// Not transitions
+@media (prefers-reduced-motion: reduce) {
+    .posts__head a::after {
+        transition: none;
+    }
+}

@@ -95,3 +95,12 @@
         display: none;
     }
 }
+
+// Not transitions
+@media (prefers-reduced-motion: reduce) {
+    .toc__highlighter,
+    .toc-toggle,
+    .toc-toggle::after {
+        transition: none;
+    }
+}
