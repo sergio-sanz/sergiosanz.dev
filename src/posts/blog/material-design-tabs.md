@@ -112,6 +112,8 @@ Dado que tenemos escuchar los clics de cada uno de los ítems, una opción intel
 
 Ya solo faltaría calcular cuántos píxeles hay que mover el _highligter_. Para ello simplemente se multiplica el índice del ítem por el tamaño de cada _tab_, que no será más que el ancho total del contenedor dividido por el número de ítems (`tabsWidth / tabs.length`).
 
+## El resultado
+
 <iframe height="265" style="width: 100%;" scrolling="no" title="Tabs like Google Material Design" src="https://codepen.io/sergios98/embed/LgzPGm?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/sergios98/pen/LgzPGm'>Tabs like Google Material Design</a> by Sergio Sanz
   (<a href='https://codepen.io/sergios98'>@sergios98</a>) on <a href='https://codepen.io'>CodePen</a>.
