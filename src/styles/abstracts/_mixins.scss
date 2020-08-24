@@ -7,7 +7,7 @@
         padding-left: $spacing + $size;
         position: relative;
 
-        &:before {
+        &::before {
             background-color: currentColor;
             border-radius: 50%;
             content: '';
