@@ -10,7 +10,9 @@ const Details = ({ date, timeToRead }) => {
 
   return (
     <ul className="details">
-      { date && <li><time dateTime={ date }>{ getDate() }</time></li> }
+      { date &&
+        <li><time dateTime={ date }>{ getDate() }</time></li>
+      }
       <li><span>{ timeToRead } minuto{ timeToRead > 1 && 's' }</span></li>
     </ul>
   );

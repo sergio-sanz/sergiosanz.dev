@@ -11,7 +11,9 @@ const PostList = ({ posts }) => {
         <article key={ post.node.id } className="post">
           <Link to={ post.node.fields.slug } className="post__wrapper">
             <div className="post__thumbnail">
-              { post.node.frontmatter.thumbnail && <Img fluid={ post.node.frontmatter.thumbnail.childImageSharp.fluid } /> }
+              { post.node.frontmatter.thumbnail &&
+                <Img fluid={ post.node.frontmatter.thumbnail.childImageSharp.fluid } />
+              }
             </div>
             <div className="post__meta">
               <h2 className="post__title">{ post.node.frontmatter.title }</h2>

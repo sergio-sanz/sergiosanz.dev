@@ -37,11 +37,15 @@ const Article = ({ frontmatter, html, timeToRead, pageContext }) => {
   return (
     <article className="article">
       <div className="article__head">
-        { frontmatter.thumbnail && <Img className="article__thumbnail" fluid={ frontmatter.thumbnail.childImageSharp.fluid } /> }
+        { frontmatter.thumbnail &&
+          <Img className="article__thumbnail" fluid={ frontmatter.thumbnail.childImageSharp.fluid } />
+        }
         <h1 className="article__title">{ frontmatter.title }</h1>
-        { frontmatter.date && <div className="article__details">
-          <Details date={ frontmatter.date } timeToRead={ timeToRead } />
-        </div> }
+        { frontmatter.date &&
+          <div className="article__details">
+            <Details date={ frontmatter.date } timeToRead={ timeToRead } />
+          </div>
+        }
       </div>
       <div className="article__body">
         <div className="article__content" dangerouslySetInnerHTML={{ __html: html }} />
@@ -54,13 +58,15 @@ const Article = ({ frontmatter, html, timeToRead, pageContext }) => {
           <ArticleNextPrev next={ next } prev={ prev } />
         </div>
       }
-      { headings.titles.length > 0 && <button
-        className={ 'toc-toggle' + (TOCActive ? ' toc-toggle--active' : '') }
-        role="switch"
-        aria-checked={ TOCActive }
-        aria-label="Contenidos"
-        onClick={ () => setTOCActive(!TOCActive) }>
-      </button> }
+      { headings.titles.length > 0 &&
+        <button
+          className={ 'toc-toggle' + (TOCActive ? ' toc-toggle--active' : '') }
+          role="switch"
+          aria-checked={ TOCActive }
+          aria-label="Contenidos"
+          onClick={ () => setTOCActive(!TOCActive) }>
+        </button>
+      }
     </article>
   );
 }

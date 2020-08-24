@@ -34,23 +34,27 @@ const TOC = ({ headings }) => {
 
   return (
     <>
-      { headings.titles.length > 0 && <div className="toc">
-        <span className="toc__title">Contenidos</span>
-        <nav className="toc__nav">
-          { headingActive >= 0 && <div className="toc__highlighter" style={{ bottom: `${((headings.titles.length - 1) * 48) - headingActive * 48}px` }}></div> }
-          {headings.titles.map(({ title }, index) => (
-            <button key={ title } className={ 'toc__link' + (headingActive === index ? ' toc__link--active' : '') } onClick={e => {
-              e.preventDefault();
-              headings.nodes[index].scrollIntoView({
-                behavior: 'smooth',
-                block: 'center',
-              })
-            }}>
-              { title }
-            </button>
-          ))}
-        </nav>
-      </div> }
+      { headings.titles.length > 0 &&
+        <div className="toc">
+          <span className="toc__title">Contenidos</span>
+          <nav className="toc__nav">
+            { headingActive >= 0 &&
+              <div className="toc__highlighter" style={{ bottom: `${((headings.titles.length - 1) * 48) - headingActive * 48}px` }}></div>
+            }
+            { headings.titles.map(({ title }, index) => (
+              <button key={ title } className={ 'toc__link' + (headingActive === index ? ' toc__link--active' : '') } onClick={e => {
+                e.preventDefault();
+                headings.nodes[index].scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'center',
+                });
+              }}>
+                { title }
+              </button>
+            )) }
+          </nav>
+        </div>
+      }
     </>
   );
 }
