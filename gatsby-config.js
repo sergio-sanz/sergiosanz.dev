@@ -2,6 +2,7 @@ const siteMetadata = {
   title: `sergiosanz.dev`,
   author: `Sergio Sanz`,
   description: `Diseño y desarrollo de aplicaciones web`,
+  siteURL: `https://sergiosanz.dev`,
 }
 
 const plugins = [
@@ -25,6 +26,7 @@ const plugins = [
       ],
     }
   },
+  `gatsby-plugin-react-helmet`,
   `gatsby-plugin-catch-links`,
   `gatsby-plugin-sass`,
   `gatsby-plugin-react-svg`,

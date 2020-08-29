@@ -5,12 +5,14 @@ import Layout from '../components/Layout';
 import PostList from '../components/PostList';
 import SEO from '../components/SEO';
 
+import thumbnail from '../assets/default.png';
+
 const HomePage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout>
-      <SEO title="Inicio" />
+      <SEO title="Inicio" image={ thumbnail } />
       <section className="home">
         <div className="wrapper">
           <h1>¡Hola! Me llamo <span className="text--highlighted">Sergio Sanz</span> y soy desarrollador web.</h1>
