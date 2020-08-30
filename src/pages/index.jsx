@@ -7,12 +7,12 @@ import SEO from '../components/SEO';
 
 import thumbnail from '../assets/default.png';
 
-const HomePage = ({ data }) => {
+const HomePage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout>
-      <SEO title="Inicio" image={ thumbnail } />
+      <SEO title="Inicio" image={ thumbnail } location={ location } />
       <section className="home">
         <div className="wrapper">
           <h1>¡Hola! Me llamo <span className="text--highlighted">Sergio Sanz</span> y soy desarrollador web.</h1>
@@ -22,7 +22,7 @@ const HomePage = ({ data }) => {
         <section className="posts">
           <div className="posts__head">
             <h1>Últimos artículos</h1>
-            <Link to="/blog">Ver todo</Link>
+            <Link to="/blog/">Ver todo</Link>
           </div>
           <PostList title="Blog" posts={ posts } />
         </section>

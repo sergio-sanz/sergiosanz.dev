@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import favicon from '../assets/favicon.ico';
 
-const SEO = ({ title, description, image }) => {
+const SEO = ({ title, description, image, location }) => {
   // Recupera la información del sitio (gatsby-config.js)
   const { site } = useStaticQuery(
     graphql`
@@ -28,6 +28,9 @@ const SEO = ({ title, description, image }) => {
     >
       <html lang="es" />
       <link rel="icon" href={ favicon } />
+      { location &&
+        <link rel="canonical" href={ site.siteMetadata.siteURL + location.pathname + (location.pathname.endsWith('/') ? '' : '/') } />
+      }
       <meta name="description" value={ description || site.siteMetadata.description } />
       <meta property="og:title" content={ (title || 'Diseño web') + ` – ${site.siteMetadata.author}` } />
       <meta property="og:description" content={ description || site.siteMetadata.description } />
