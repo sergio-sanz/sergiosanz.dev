@@ -31,7 +31,7 @@ const SEO = ({ title, description, image, location }) => {
       { location &&
         <link rel="canonical" href={ site.siteMetadata.siteURL + location.pathname + (location.pathname.endsWith('/') ? '' : '/') } />
       }
-      <meta name="description" value={ description || site.siteMetadata.description } />
+      <meta name="description" content={ description || site.siteMetadata.description } />
       <meta property="og:title" content={ (title || 'Diseño web') + ` – ${site.siteMetadata.author}` } />
       <meta property="og:description" content={ description || site.siteMetadata.description } />
       { image &&

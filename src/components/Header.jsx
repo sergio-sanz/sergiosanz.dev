@@ -18,7 +18,7 @@ const Header = ({ page, post }) => {
           <Hamburger openSide={ openSide } setOpenSide={ setOpenSide } />
         </div>
         <div className="header__logo">
-          <Link to="/">
+          <Link to="/" aria-label="Inicio">
             <Logo />
           </Link>
         </div>
