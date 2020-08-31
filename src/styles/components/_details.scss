@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    ARTICLE DETAILS LIST
+\*------------------------------------*/
+
+.details {
+    color: var(--gray-color);
+
+    li {
+        display: inline-block;
+        @include separator;
+    }
+}

@@ -1,0 +1,106 @@
+/*------------------------------------*\
+    TABLE OF CONTENTS STYLES
+\*------------------------------------*/
+
+.toc {
+    position: sticky;
+    top: calc(var(--header-height) + 7.5rem);
+}
+
+.toc__title {
+    display: block;
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-bottom: var(--spacing-small);
+    text-transform: uppercase;
+}
+
+.toc__nav {
+    padding-left: var(--spacing-small);
+}
+
+.toc__link {
+    display: block;
+    line-height: 48px;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 230px;
+
+    &:hover,
+    &--active {
+        color: var(--primary-color);
+    }
+}
+
+.toc__highlighter {
+    height: 48px;
+    left: 0;
+    position: absolute;
+    transition: bottom 0.2s ease;
+    width: 2px;
+
+    &::before {
+        background-color: var(--primary-color);
+        content: '';
+        height: 18px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+}
+
+.toc-toggle {
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    bottom: var(--spacing-medium);
+    box-shadow: -5px 0 10px hsla(0, 0%, 0%, 0.1);
+    height: 60px;
+    position: fixed;
+    padding: 1.5em;
+    right: 0;
+    transform: translateX(50%);
+    transition: transform 0.2s ease;
+    width: 60px;
+
+    &::after {
+        border-color: currentColor;
+        border-right: 3px solid;
+        border-top: 3px solid;
+        content: '';
+        display: block;
+        height: 11px;
+        left: 15px;
+        perspective: 5.5px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(225deg);
+        transition: transform 0.3s ease 0.1s;
+        width: 11px;
+    }
+
+    &--active {
+        transform: translateX(-248px);
+
+        &::after {
+            transform: translateY(-50%) translateX(-50%) rotateY(0.5turn) rotate(225deg);
+        }
+    }
+}
+
+@media screen and (min-width: map-get($breakpoints, large)) {
+    .toc-toggle {
+        display: none;
+    }
+}
+
+// Not transitions
+@media (prefers-reduced-motion: reduce) {
+    .toc__highlighter,
+    .toc-toggle,
+    .toc-toggle::after {
+        transition: none;
+    }
+}

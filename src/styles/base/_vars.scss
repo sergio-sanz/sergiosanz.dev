@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    VARIABLES CSS
+\*------------------------------------*/
+
+:root {
+    // Colores
+    --primary-color: hsl(205, 80%, 35%);
+    --primary-light-color: hsl(205, 80%, 90%);
+    --primary-dark-color: hsl(205, 80%, 10%);
+    --black-color: hsl(0, 0%, 19%);
+    --white-color: hsl(0, 0%, 90%);
+    --gray-color: hsl(0, 0%, 46%);
+    --text-color: var(--black-color);
+    --inverted-text-color: var(--white-color);
+    --bg-color: hsl(0, 0%, 100%);
+    --border-color: hsl(0, 0%, 92%);
+    --footer-color: hsl(0, 0%, 94%);
+    --footer-text-color: hsl(0, 0%, 42%);
+    --selection-color: var(--primary-light-color);
+    // Tipografías
+    --font-family: 'Barlow', sans-serif;
+    --font-family-text: 'Merriweather', serif;
+    // Tamaños de fuente
+    --font-size-xlarge: 2.625rem;
+    --font-size-large: 2rem;
+    --font-size-medium: 1.375rem;
+    --font-size-regular: 1.125rem;
+    --font-size-small: 0.9375rem;
+    // Márgenes
+    --spacing-xlarge: 5.625rem;
+    --spacing-large: 2.5rem;
+    --spacing-medium: 1.875rem;
+    --spacing-small: 1rem;
+    --spacing-between-paragraph: 1.5rem;
+    // Tamaños
+    --border-radius: 3px;
+    --header-height: 70px;
+    --max-width-wrapper: 1080px;
+    --text-line-height: 1.9em;
+}
+
+html.dark-mode {
+    --gray-color: hsl(0, 0%, 50%);
+    --text-color: hsl(0, 0%, 90%);
+    --bg-color: hsl(0, 0%, 8%);
+    --border-color: hsl(0, 0%, 16%);
+    --footer-color: hsl(0, 0%, 14%);
+    --footer-text-color: hsl(0, 0%, 54%);
+    --selection-color: hsla(205, 80%, 35%, 0.25);
+}
+
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+
+$breakpoints: (
+  small: 460px,
+  medium: 768px,
+  large: 960px,
+  xlarge: 1150px,
+);

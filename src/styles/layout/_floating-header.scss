@@ -1,0 +1,118 @@
+/*------------------------------------*\
+    FLOATING HEADER STYLES
+\*------------------------------------*/
+
+.floating-header {
+    background-color: var(--bg-color);
+    height: var(--header-height);
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease,
+                visibility 0s 0.2s;
+    visibility: hidden;
+    width: 100%;
+    z-index: 20;
+
+    &--active {
+        box-shadow: inset 0 -1px 0 var(--border-color),
+                0 5px 10px hsla(0, 0%, 0%, 0.07);
+        transform: translateY(0);
+        transition: transform 0.2s ease,
+                    visibility 0s;
+        visibility: visible;
+    }
+}
+
+.floating-header__content {
+    align-items: center;
+    display: flex;
+    padding: 0 var(--spacing-xlarge);
+}
+
+.floating-header__heading {
+    flex: 1;
+    font-size: var(--font-size-medium);
+    font-weight: 600;
+    line-height: var(--header-height);
+    min-width: 0;
+    padding: 0 var(--spacing-medium);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.floating-header__share {
+    display: inline-flex;
+
+    .floating-header__social {
+        // Este valor se cambia vía JavaScript
+        display: none;
+        height: 36px;
+
+        li {
+            display: inline-block;
+            margin-right: var(--spacing-small);
+            opacity: 0;
+            transform: scale(0);
+            transition: transform 0.2s ease,
+                        opacity 0.2s ease;
+
+            @for $i from 0 to 3 {
+                &:nth-child(#{ $i + 1 }) {
+                    transition-delay: #{ (3 - $i) * 15 }ms;
+                }
+            }
+        }
+    }
+
+    .icon {
+        transition: color 0.2s ease;
+    }
+
+    &--active {
+        .header__button,
+        .header__button:hover,
+        .header__button:active {
+            &::before {
+                background-color: var(--button-focus-color);
+                transform: scale(1.3);
+            }
+
+            .icon {
+                color: var(--primary-color);
+            }
+        }
+
+        .floating-header__social li {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+// Medium Screens
+@media screen and (max-width: map-get($breakpoints, xlarge)) {
+    .floating-header__content {
+        padding: 0 var(--spacing-medium);
+    }
+}
+
+// Small Screens
+@media screen and (max-width: map-get($breakpoints, small)) {
+    .floating-header__content {
+        padding: 0 var(--spacing-small);
+    }
+
+    .floating-header__heading {
+        padding: 0 var(--spacing-small);
+    }
+}
+
+// Not transitions
+@media (prefers-reduced-motion: reduce) {
+    .floating-header,
+    .floating-header__share .floating-header__social li,
+    .floating-header__share .icon {
+        transition: none;
+    }
+}
