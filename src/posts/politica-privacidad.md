@@ -31,4 +31,4 @@ En cualquier momento puedo modificar la presente política para adaptarla a nove
 
 * * *
 
-*Última revisión el 04/08/2020*
+*Última revisión el 31/08/2020*

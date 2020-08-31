@@ -49,4 +49,4 @@ A continuación le facilitamos los enlaces de ayuda a los navegadores más frecu
 
 * * *
 
-*Última revisión el 04/08/2020*
+*Última revisión el 31/08/2020*

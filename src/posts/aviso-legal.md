@@ -60,4 +60,4 @@ Para la resolución de todas las controversias o cuestiones relacionadas con el 
 
 * * *
 
-*Última revisión el 04/08/2020*
+*Última revisión el 31/08/2020*
