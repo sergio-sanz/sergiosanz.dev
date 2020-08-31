@@ -20,7 +20,7 @@
 .article__content {
     font-family: var(--font-family-text);
     font-size: var(--font-size-regular);
-    line-height: 2em;
+    line-height: var(--text-line-height);
     max-width: var(--article-width);
     min-width: 0;
     overflow-wrap: break-word;
@@ -30,7 +30,7 @@
     p,
     pre,
     ul {
-        margin-bottom: 1.125rem;
+        margin-bottom: var(--spacing-between-paragraph);
     }
 
     strong {
