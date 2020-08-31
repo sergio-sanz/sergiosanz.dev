@@ -5,12 +5,12 @@ import Layout from '../components/Layout';
 import PostList from '../components/PostList';
 import SEO from '../components/SEO';
 
-const BlogPage = ({ data }) => {
+const BlogPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title="Blog" location={ location } />
       <div className="wrapper">
         <section className="posts">
           <h1>Blog</h1>

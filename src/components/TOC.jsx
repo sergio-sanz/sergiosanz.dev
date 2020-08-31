@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { throttle } from 'lodash';
 
 // Calcula que encabezado está activo
 const accumulateOffsetTop = (el, totalOffset = 0) => {
@@ -15,7 +16,7 @@ const TOC = ({ headings }) => {
 
   // Añade un 'scroll listener'
   useEffect(() => {
-    const scrollListener = () => {
+    const scrollListener = throttle(() => {
       const { titles, nodes } = headings;
 
       const offsets = nodes.map(el => accumulateOffsetTop(el));
@@ -23,7 +24,7 @@ const TOC = ({ headings }) => {
         offset => offset > window.scrollY + 0.8 * window.innerHeight
       );
       setHeadingActive(activeIndex === -1 ? titles.length - 1 : activeIndex - 1);
-    }
+    }, 200);
 
     document.addEventListener('scroll', scrollListener);
 
@@ -42,7 +43,7 @@ const TOC = ({ headings }) => {
               <div className="toc__highlighter" style={{ bottom: `${((headings.titles.length - 1) * 48) - headingActive * 48}px` }}></div>
             }
             { headings.titles.map(({ title }, index) => (
-              <button key={ title } className={ 'toc__link' + (headingActive === index ? ' toc__link--active' : '') } onClick={e => {
+              <button key={ title } className={ 'toc__link' + (headingActive === index ? ' toc__link--active' : '') } onClick={ e => {
                 e.preventDefault();
                 headings.nodes[index].scrollIntoView({
                   behavior: 'smooth',

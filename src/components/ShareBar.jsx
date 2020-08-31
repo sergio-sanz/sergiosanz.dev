@@ -34,7 +34,7 @@ const ShareBar = ({ page }) => {
           </a>
         </li>
         <li>
-          <a className="social-icon social-icon--whatsapp" href={ typeof window !== 'undefined' ? `whatsapp://send?text=${page.title} ${window.location.href}` : '' }>
+          <a className="social-icon social-icon--whatsapp" href={ typeof window !== 'undefined' ? `https://api.whatsapp.com/send?text=${page.title} ${window.location.href}` : '' } target="_blank" rel="noreferrer" title="Compartir en WhatsApp">
             <WhatsappIcon />
           </a>
         </li>

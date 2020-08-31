@@ -5,14 +5,24 @@ import Article from '../components/Article';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-const posts = ({ data, pageContext }) => {
+const posts = ({ data, pageContext, location }) => {
   const { frontmatter, html, timeToRead, excerpt } = data.markdownRemark;
 
   return (
     <Layout page={ frontmatter }>
-      <SEO title={ frontmatter.title } description={ excerpt } image={ frontmatter.thumbnail.childImageSharp.fluid.src } />
+      <SEO
+        title={ frontmatter.title }
+        description={ excerpt }
+        image={ frontmatter.thumbnail.childImageSharp.fluid.src }
+        location={ location }
+      />
       <div className="wrapper">
-        <Article frontmatter={ frontmatter } html={ html } timeToRead={ timeToRead } pageContext={ pageContext } />
+        <Article
+          frontmatter={ frontmatter }
+          html={ html }
+          timeToRead={ timeToRead }
+          pageContext={ pageContext }
+        />
       </div>
     </Layout>
   );
