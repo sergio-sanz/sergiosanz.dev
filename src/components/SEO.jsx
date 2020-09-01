@@ -15,18 +15,18 @@ const SEO = ({ title, description, image, location }) => {
       <html lang="es" />
       <link rel="icon" href={ favicon } />
       { location &&
-        <link rel="canonical" href={ site.siteURL + location.pathname + (location.pathname.endsWith('/') ? '' : '/') } />
+        <link rel="canonical" href={ site.siteUrl + location.pathname + (location.pathname.endsWith('/') ? '' : '/') } />
       }
       <meta name="description" content={ description || site.description } />
       <meta property="og:title" content={ (title || 'Diseño web') + ` – ${site.author}` } />
       <meta property="og:description" content={ description || site.description } />
       { image &&
-        <meta property="og:image" content={ site.siteURL + image } />
+        <meta property="og:image" content={ site.siteUrl + image } />
       }
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:description" content={ description || site.description } />
       { image &&
-        <meta name="twitter:image" content={ site.siteURL + image } />
+        <meta name="twitter:image" content={ site.siteUrl + image } />
       }
     </Helmet>
   );

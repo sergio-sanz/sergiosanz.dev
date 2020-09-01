@@ -2,7 +2,7 @@ const siteMetadata = {
   title: `sergiosanz.dev`,
   author: `Sergio Sanz`,
   description: `Diseño y desarrollo de aplicaciones web`,
-  siteURL: `https://sergiosanz.dev`,
+  siteUrl: `https://sergiosanz.dev`,
 }
 
 const plugins = [
@@ -31,6 +31,7 @@ const plugins = [
   `gatsby-plugin-sass`,
   `gatsby-plugin-react-svg`,
   `gatsby-plugin-sharp`,
+  `gatsby-plugin-sitemap`,
   `gatsby-transformer-sharp`,
   {
     resolve: `gatsby-source-filesystem`,
