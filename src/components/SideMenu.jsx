@@ -19,7 +19,7 @@ const SideMenu = ({ openSide, setOpenSide }) => {
 
   useKeyPress('Escape', () => {
     closeSideMenu();
-  })
+  });
 
   return (
     <div className={ 'side-menu' + (openSide ? ' side-menu--active' : '') }>

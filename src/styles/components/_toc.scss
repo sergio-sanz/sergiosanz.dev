@@ -90,9 +90,22 @@
     }
 }
 
+// Large Screens
 @media screen and (min-width: map-get($breakpoints, large)) {
     .toc-toggle {
         display: none;
+    }
+}
+
+// Medium Screens
+@media screen and (max-width: map-get($breakpoints, large)) {
+    .toc {
+        top: 0;
+    }
+
+    .toc__title {
+        margin-top: 10px;
+        margin-bottom: 24px;
     }
 }
 
