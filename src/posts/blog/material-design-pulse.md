@@ -4,7 +4,7 @@ date: '2018-12-22'
 thumbnail: '../../images/pulse.jpg'
 ---
 
-La semana pasada hablé sobre [cómo conseguir la animación de las tabs](/blog/material-design-tabs) característico de [Material Design](https://material.io/), y hoy volvemos con otra de sus animaciones más interesantes, el **efecto _pulse_**.
+La semana pasada hablé sobre [cómo conseguir la animación de las tabs](/blog/material-design-tabs/) característico de [Material Design](https://material.io/), y hoy volvemos con otra de sus animaciones más interesantes, el **efecto _pulse_**.
 
 ## La estructura HTML
 

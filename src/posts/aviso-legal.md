@@ -34,7 +34,7 @@ También pueden incluirse enlaces de afiliados de productos recomendados, que no
 
 De conformidad con la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales y el Reglamento (UE) 2016/679 del Parlamento Europeo, el Prestador se compromete a adoptar las medidas técnicas y organizativas necesarias, según el nivel de seguridad de los datos recabados, de forma que garantices la seguridad de los datos de carácter personal y eviten su alteración, pérdida, tratamiento o acceso no autorizado.
 
-Para ampliar información, consulte la [política de privacidad](/politica-privacidad) de esta web.
+Para ampliar información, consulte la [política de privacidad](/politica-privacidad/) de esta web.
 
 ## Propiedad intelectual
 
@@ -42,7 +42,7 @@ Soy titular de todos los derechos de propiedad intelectual de la web, así como 
 
 Cualquier uso no autorizado previamente por mí, será considerado un incumplimiento grave de los derechos de propiedad intelectual o industrial del autor.
 
-Para realizar cualquier tipo de observación respecto a posibles incumplimientos de los derechos de propiedad intelectual o industrial, así como sobre cualquiera de los contenidos del sitio web, puede hacerlo a través de la siguiente [página de contacto](/contacto), o a través de la dirección de correo electrónico proporcionada al inicio de este documento.
+Para realizar cualquier tipo de observación respecto a posibles incumplimientos de los derechos de propiedad intelectual o industrial, así como sobre cualquiera de los contenidos del sitio web, puede hacerlo a través de la siguiente [página de contacto](/contacto/), o a través de la dirección de correo electrónico proporcionada al inicio de este documento.
 
 ## Exclusión de garantías y responsabilidad
 

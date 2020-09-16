@@ -6,7 +6,7 @@ thumbnail: '../../images/ripple.png'
 
 Para cerrar con esta serie de artículos sobre [Material Design](https://material.io/), hoy crearemos usando únicamente JavaScript puro el **efecto _ripple_**, también llamado **waves**, por ser similar a una ola que se extiende por el agua.
 
-Para crear este efecto recomiendo antes haber leído [mi anterior artículo](/blog/material-design-pulse), ya que la técnica es la misma.
+Para crear este efecto recomiendo antes haber leído [mi anterior artículo](/blog/material-design-pulse/), ya que la técnica es la misma.
 
 ## La estructura HTML
 
