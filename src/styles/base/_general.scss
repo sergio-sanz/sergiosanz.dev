@@ -2,14 +2,16 @@
     GENERAL STYLES
 \*------------------------------------*/
 
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+    height: 100%;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-}
-
-body,
-#gatsby-focus-wrapper {
-    height: 100vh;
 }
 
 #gatsby-focus-wrapper {
