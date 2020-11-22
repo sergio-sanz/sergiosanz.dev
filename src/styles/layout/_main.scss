@@ -18,6 +18,12 @@
     max-width: var(--max-width-wrapper);
     padding: 0 var(--spacing-medium);
     width: 100%;
+
+    &--center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 // Small Screens

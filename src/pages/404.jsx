@@ -10,7 +10,7 @@ const notFound = () => {
   return (
     <Layout>
       <SEO title="Página no encontrada" />
-      <div className="wrapper">
+      <div className="wrapper wrapper--center">
         <section className="error-page">
           <div className="error-page__wrapper">
             <Error404 />
