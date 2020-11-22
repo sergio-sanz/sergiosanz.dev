@@ -12,9 +12,10 @@
   "license": "MIT",
   "dependencies": {
     "focus-visible": "^5.1.0",
-    "gatsby": "^2.23.21",
+    "gatsby": "^2.27.0",
     "gatsby-image": "^2.4.13",
     "gatsby-plugin-catch-links": "^2.3.11",
+    "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.3.10",

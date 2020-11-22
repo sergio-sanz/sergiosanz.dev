@@ -46,6 +46,12 @@ const plugins = [
       name: `images`,
       path: `${__dirname}/src/images`,
     },
+  },
+  {
+    resolve: `gatsby-plugin-favicon`,
+    options: {
+      logo: `${__dirname}/src/assets/favicon.png`,
+    }
   }
 ]
 

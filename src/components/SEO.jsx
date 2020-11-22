@@ -2,7 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import useSiteMetadata from '../hooks/useSiteMetadata';
-import favicon from '../assets/favicon.ico';
 
 const SEO = ({ title, description, image, location }) => {
   const site = useSiteMetadata();
@@ -13,7 +12,6 @@ const SEO = ({ title, description, image, location }) => {
       titleTemplate={ `%s – ${site.author}` }
     >
       <html lang="es" />
-      <link rel="icon" href={ favicon } />
       <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
       { location &&
         <link rel="canonical" href={ site.siteUrl + location.pathname + (location.pathname.endsWith('/') ? '' : '/') } />
