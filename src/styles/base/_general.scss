@@ -4,8 +4,7 @@
 
 html,
 body,
-#___gatsby,
-#gatsby-focus-wrapper {
+#___gatsby {
     height: 100%;
 }
 
@@ -17,6 +16,7 @@ body {
 #gatsby-focus-wrapper {
     display: flex;
     flex-direction: column;
+    min-height: 100%;
 }
 
 a {
