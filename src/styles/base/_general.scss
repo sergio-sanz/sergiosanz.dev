@@ -31,6 +31,7 @@ button {
     color: inherit;
     cursor: pointer;
     font: inherit;
+    margin: 0;
     padding: 0;
     @extend %focus-visible;
 }
