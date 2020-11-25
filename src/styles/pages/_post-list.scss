@@ -62,7 +62,21 @@
     margin-right: var(--spacing-large);
     max-width: 300px;
     overflow: hidden;
+    position: relative;
     width: 100%;
+}
+
+.post__label {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    color: var(--white-color);
+    font-size: var(--font-size-xsmall);
+    left: var(--spacing-small);
+    letter-spacing: 0.0125rem;
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    text-transform: uppercase;
+    top: var(--spacing-small);
 }
 
 .post__title,

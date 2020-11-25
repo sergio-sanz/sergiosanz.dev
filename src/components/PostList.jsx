@@ -5,6 +5,16 @@ import Img from 'gatsby-image';
 import Details from './Details';
 
 const PostList = ({ posts }) => {
+  // Determina si un artículo es nuevo o no
+  const isRecent = date => {
+    const dateObj = new Date(date);
+    const now = new Date();
+    // Calcula el número de días que han pasado desde que se publicó el artículo
+    const diff = (now - dateObj) / 86400000; // 1 día = 86400000 milisegundos
+    // Devuelve true si el artículo tiene menos de 7 días de antigüedad
+    return diff <= 7;
+  }
+
   return (
     <>
       { posts.map(post => (
@@ -13,6 +23,9 @@ const PostList = ({ posts }) => {
             <div className="post__thumbnail">
               { post.node.frontmatter.thumbnail &&
                 <Img fluid={ post.node.frontmatter.thumbnail.childImageSharp.fluid } />
+              }
+              { isRecent(post.node.frontmatter.date) &&
+                <span className="post__label">Nuevo</span>
               }
             </div>
             <div className="post__meta">
