@@ -20,7 +20,9 @@ const plugins = [
         },
         {
           resolve: `gatsby-remark-images-medium-zoom`,
-          options: {}
+          options: {
+            background: `var(--bg-color)`,
+          }
         },
         `gatsby-remark-prismjs`,
       ],
