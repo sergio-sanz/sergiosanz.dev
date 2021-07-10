@@ -11,7 +11,7 @@ const useKeyPress = (key, callback) => {
     document.addEventListener('keydown', handlePress);
 
     return () => {
-      document.removeEventListener('click', handlePress);
+      document.removeEventListener('keydown', handlePress);
     }
   });
 }
